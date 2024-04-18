@@ -25,7 +25,7 @@ class Utils:
         for unit in units:
                 units_update.append({
                     "Unit": str(unit.get('name', 'NA')),
-                    "unit_id": unit.get('_id','NA'),
+                    "unit_id": str(unit.get('_id','NA')),
                     "spd": unit['last_update'].get('spd', 0) if 'last_update' in unit else 0,
                     "acc":  unit['last_update'].get('acc', 0) if 'last_update' in unit else 0,
                     "last_update": unit['last_update'].get('dtt', 0) if 'last_update' in unit else 0,
