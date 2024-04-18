@@ -24,20 +24,20 @@ class Utils:
         units_update = []
         for unit in units:
                 units_update.append({
-                    "Unit": unit.get('name', 'null'),
-                    "unit_id": unit.get('_id',),
+                    "Unit": str(unit.get('name', 'NA')),
+                    "unit_id": unit.get('_id','NA'),
                     "spd": unit['last_update'].get('spd', 0) if 'last_update' in unit else 0,
                     "acc":  unit['last_update'].get('acc', 0) if 'last_update' in unit else 0,
                     "last_update": unit['last_update'].get('dtt', 0) if 'last_update' in unit else 0,
-                    "device_imei": unit.get('imei', ''),
-                    "device_serial": unit.get('device_serial', ''),
-                    "sim_number": unit.get('sim_number', ''),
-                    "sim_serial": unit.get('sim_serial', ''),
-                    "device": unit.get('device', ''),
-                    "company": unit.get('company', ''),
-                    "user_id_units" :unit.get('user_id',''),
-                    "account": unit.get("owner",''),
-                    "operation_code": unit.get('operation_code', ''),
+                    "device_imei": str(unit.get('imei', 'NA')),
+                    "device_serial": str(unit.get('device_serial', 'NA')),
+                    "sim_number": str(unit.get('sim_number', 'NA')),
+                    "sim_serial": str(unit.get('sim_serial', 'NA')),
+                    "device": str(unit.get('device', 'NA')),
+                    "company": str(unit.get('company', 'NA')),
+                    "user_id_units" :str(unit.get('user_id','NA')),
+                    "account": str(unit.get("owner",'NA')),
+                    "operation_code": str(unit.get('operation_code', 'NA')),
                     "vehicle_battery": unit['last_update']['prms'].get('ePwrV', 0) if 'last_update' in unit and 'prms' in unit['last_update'] else 0
                 })
         return units_update
