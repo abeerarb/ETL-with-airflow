@@ -2,7 +2,7 @@ from airflow import DAG
 from airflow.decorators import task
 from airflow.utils.dates import days_ago
 from globals import Globals
-from datetime import datetime
+from datetime import datetime, timedelta
 import json
 import logging  
 from globals import Globals
@@ -12,12 +12,22 @@ from elk_manager import ElkManager
 
 logger = logging.getLogger(__name__)
 
+def cleanup_xcom(context):
+    # Access the task instance object
+    ti = context['task_instance']
+    
+    # Delete XCom data for the task
+    ti.xcom_clear()
+
+
+
 default_args = {
     'owner': 'abeer-araby',
     'depends_on_past': False,
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 3
+    ,'retry_delay': timedelta(minutes=1)  
     #,'xcom_cleanup': True  
 }
 child_userid= "5d63e51e03ed5292a42c24e6" #"afaqyic"
@@ -111,6 +121,8 @@ with DAG(
     schedule_interval='@hourly',
     start_date=days_ago(1),
     catchup=False,
+    on_success_callback=cleanup_xcom,
+    on_failure_callback=cleanup_xcom
 ) as dag:   
 
     parent= login_parent(username,password) 
