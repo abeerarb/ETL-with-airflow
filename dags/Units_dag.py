@@ -24,7 +24,7 @@ def cleanup_xcom(context):
 default_args = {
     'owner': 'abeer-araby',
     'depends_on_past': False,
-    'email_on_failure': False,
+    'email_on_failure': 'abeer.araby@afaqy.com',
     'email_on_retry': False,
     'retries': 3
     ,'retry_delay': timedelta(minutes=1)  
@@ -118,7 +118,7 @@ with DAG(
     'Units_statistics_DAG',
     default_args=default_args,
     description='A DAG to ETL units from api to elasticsearch',
-    schedule_interval='@hourly',
+    schedule_interval='*/20 * * * *',  # Cron expression for every 20 minutes
     start_date=days_ago(1),
     catchup=False,
     on_success_callback=cleanup_xcom,
