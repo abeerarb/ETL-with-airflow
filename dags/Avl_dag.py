@@ -2,7 +2,9 @@ from airflow.utils.dates import days_ago
 from airflow import DAG
 from datetime import timedelta
 from avl_pipeline.groups.apis_group import get_units_api_call
-import pymongo
+from avl_pipeline.groups.mongo_group import mongo_group_tasks
+from avl_pipeline.utilities import Utils
+
 
 default_args = {
     'owner': 'abeer-araby',
@@ -14,14 +16,16 @@ default_args = {
 }
 
 with DAG(
-    dag_id='AVL_DAG',g
+    dag_id='AVL_DAG',
     default_args=default_args,
     description='A DAG to ETL units signals',
     schedule_interval= '@daily',  # Cron expression for every 20 minutes
     start_date=days_ago(1),
     catchup=False
 ) as dag:
-    units = get_units_api_call()
+    units_ids = get_units_api_call()
+    mongo_grouping = mongo_group_tasks()
+    concat_info = Utils.concat_groups_connection_string()
     
 
-units
+    units_ids >> mongo_grouping >> concat_info

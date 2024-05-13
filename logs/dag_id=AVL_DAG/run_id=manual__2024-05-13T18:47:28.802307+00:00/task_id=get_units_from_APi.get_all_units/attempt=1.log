@@ -1,0 +1,20 @@
+[2024-05-13T18:47:40.335+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T18:47:40.393+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AVL_DAG.get_units_from_APi.get_all_units manual__2024-05-13T18:47:28.802307+00:00 [queued]>
+[2024-05-13T18:47:40.410+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AVL_DAG.get_units_from_APi.get_all_units manual__2024-05-13T18:47:28.802307+00:00 [queued]>
+[2024-05-13T18:47:40.411+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-05-13T18:47:40.436+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_units_from_APi.get_all_units> on 2024-05-13 18:47:28.802307+00:00
+[2024-05-13T18:47:40.448+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=1113) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-13T18:47:40.451+0000] {standard_task_runner.py:63} INFO - Started process 1114 to run task
+[2024-05-13T18:47:40.452+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'AVL_DAG', 'get_units_from_APi.get_all_units', 'manual__2024-05-13T18:47:28.802307+00:00', '--job-id', '56408', '--raw', '--subdir', 'DAGS_FOLDER/Avl_dag.py', '--cfg-path', '/tmp/tmpv834sqhh']
+[2024-05-13T18:47:40.454+0000] {standard_task_runner.py:91} INFO - Job 56408: Subtask get_units_from_APi.get_all_units
+[2024-05-13T18:47:40.550+0000] {task_command.py:426} INFO - Running <TaskInstance: AVL_DAG.get_units_from_APi.get_all_units manual__2024-05-13T18:47:28.802307+00:00 [running]> on host 117fd00757b6
+[2024-05-13T18:47:40.795+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='AVL_DAG' AIRFLOW_CTX_TASK_ID='get_units_from_APi.get_all_units' AIRFLOW_CTX_EXECUTION_DATE='2024-05-13T18:47:28.802307+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-13T18:47:28.802307+00:00'
+[2024-05-13T18:47:40.796+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T18:47:47.910+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-13T18:47:47.911+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T18:47:47.927+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=AVL_DAG, task_id=get_units_from_APi.get_all_units, run_id=manual__2024-05-13T18:47:28.802307+00:00, execution_date=20240513T184728, start_date=20240513T184740, end_date=20240513T184747
+[2024-05-13T18:47:47.976+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-13T18:47:48.021+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-13T18:47:48.022+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

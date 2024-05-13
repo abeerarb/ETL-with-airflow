@@ -1,0 +1,41 @@
+[2024-05-13T16:11:14.184+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T16:11:14.239+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AVL_DAG.MongoDb.units_collection manual__2024-05-13T16:10:53.171784+00:00 [queued]>
+[2024-05-13T16:11:14.264+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AVL_DAG.MongoDb.units_collection manual__2024-05-13T16:10:53.171784+00:00 [queued]>
+[2024-05-13T16:11:14.265+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-05-13T16:11:14.293+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): MongoDb.units_collection> on 2024-05-13 16:10:53.171784+00:00
+[2024-05-13T16:11:14.307+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=22092) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-13T16:11:14.311+0000] {standard_task_runner.py:63} INFO - Started process 22093 to run task
+[2024-05-13T16:11:14.315+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'AVL_DAG', 'MongoDb.units_collection', 'manual__2024-05-13T16:10:53.171784+00:00', '--job-id', '56150', '--raw', '--subdir', 'DAGS_FOLDER/Avl_dag.py', '--cfg-path', '/tmp/tmpkpqwas6h']
+[2024-05-13T16:11:14.318+0000] {standard_task_runner.py:91} INFO - Job 56150: Subtask MongoDb.units_collection
+[2024-05-13T16:11:14.430+0000] {task_command.py:426} INFO - Running <TaskInstance: AVL_DAG.MongoDb.units_collection manual__2024-05-13T16:10:53.171784+00:00 [running]> on host 7138d7e072c5
+[2024-05-13T16:11:14.650+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='AVL_DAG' AIRFLOW_CTX_TASK_ID='MongoDb.units_collection' AIRFLOW_CTX_EXECUTION_DATE='2024-05-13T16:10:53.171784+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-13T16:10:53.171784+00:00'
+[2024-05-13T16:11:14.651+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T16:11:14.743+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T16:11:14.744+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/avl_pipeline/mongo_manager.py", line 29, in select_collection
+    db = client[db_name]
+         ~~~~~~^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[2024-05-13T16:11:14.766+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=AVL_DAG, task_id=MongoDb.units_collection, run_id=manual__2024-05-13T16:10:53.171784+00:00, execution_date=20240513T161053, start_date=20240513T161114, end_date=20240513T161114
+[2024-05-13T16:11:14.794+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 56150 for task MongoDb.units_collection (string indices must be integers, not 'str'; 22093)
+[2024-05-13T16:11:14.809+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-13T16:11:14.864+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-13T16:11:14.866+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

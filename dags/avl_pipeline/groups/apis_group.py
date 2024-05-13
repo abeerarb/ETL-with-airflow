@@ -8,6 +8,7 @@ import requests as _ApiCaller
 from bson import ObjectId
 
 
+
 logger = logging.getLogger(__name__)
 
 def login_parent(acc_name: str, acc_pass: str, **kwargs):
@@ -50,8 +51,7 @@ def get_all_units(**kwargs):
     response = _ApiCaller.post(Globals.api_endpoint+"units/lists?token="+child_token, data_payload) 
     if response.status_code == 200:
         units_list = response.json()['data']
-        ids_list = [ObjectId(unit['_id']) for unit in units_list]
-        kwargs['ti'].xcom_push(key='units_ids', value= ids_list)
+        kwargs['ti'].xcom_push(key='units_ids', value= units_list)
     else:
         logger.error("Error:", response.status_code)
 
@@ -82,5 +82,7 @@ def get_units_api_call():
             task_id='get_all_units',
             python_callable=get_all_units
             )
-
+            
             parent_login >> child_login >> count_units >> get_units
+            return  units_api
+

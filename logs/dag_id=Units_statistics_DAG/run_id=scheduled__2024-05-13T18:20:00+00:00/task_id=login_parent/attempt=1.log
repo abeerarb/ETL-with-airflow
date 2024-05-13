@@ -1,0 +1,20 @@
+[2024-05-13T18:40:01.706+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T18:40:01.747+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.login_parent scheduled__2024-05-13T18:20:00+00:00 [queued]>
+[2024-05-13T18:40:01.762+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.login_parent scheduled__2024-05-13T18:20:00+00:00 [queued]>
+[2024-05-13T18:40:01.763+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2024-05-13T18:40:01.795+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonDecoratedOperator): login_parent> on 2024-05-13 18:20:00+00:00
+[2024-05-13T18:40:01.809+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=972) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-13T18:40:01.812+0000] {standard_task_runner.py:63} INFO - Started process 973 to run task
+[2024-05-13T18:40:01.813+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'login_parent', 'scheduled__2024-05-13T18:20:00+00:00', '--job-id', '56382', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmpr_ap5eyj']
+[2024-05-13T18:40:01.816+0000] {standard_task_runner.py:91} INFO - Job 56382: Subtask login_parent
+[2024-05-13T18:40:01.920+0000] {task_command.py:426} INFO - Running <TaskInstance: Units_statistics_DAG.login_parent scheduled__2024-05-13T18:20:00+00:00 [running]> on host 117fd00757b6
+[2024-05-13T18:40:02.117+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='login_parent' AIRFLOW_CTX_EXECUTION_DATE='2024-05-13T18:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-13T18:20:00+00:00'
+[2024-05-13T18:40:02.119+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T18:40:02.882+0000] {Units_dag.py:45} INFO - ti context info :eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5hZmFxeS5zYS9hdXRoL2xvZ2luIiwiaWF0IjoxNzE1NjI1NjAyLCJleHAiOjE3MTgyMTc2MDIsIm5iZiI6MTcxNTYyNTYwMiwianRpIjoic0RsUDZqYlVhOXQ2TTA3ayIsInN1YiI6IjY1N2YwYWQ3M2Y5NzcyOTVjZjA1NTc2YSIsInBydiI6IjI3MGVjZmM3ZWEzZWQ5MzdlYTg0OTM2MmEzYTUwOTEwYzZkOGNlNGYifQ.vlRH5F6ShHrgy32-a5uN3DRodAC8KVVjqCdkWgqgrR0
+[2024-05-13T18:40:02.886+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-13T18:40:02.887+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T18:40:02.909+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Units_statistics_DAG, task_id=login_parent, run_id=scheduled__2024-05-13T18:20:00+00:00, execution_date=20240513T182000, start_date=20240513T184001, end_date=20240513T184002
+[2024-05-13T18:40:02.955+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-13T18:40:02.979+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

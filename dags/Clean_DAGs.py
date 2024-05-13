@@ -22,7 +22,7 @@ from airflow.models import XCom
 
 @provide_session
 def cleanup_xcom(session=None):
-    session.query(XCom).filter(XCom.dag_id == "Units_statistics_DAG").delete()
+    session.query(XCom).filter(XCom.dag_id == "AVL_DAG").delete()
 
 with DAG(
     'clear_xcom_data_daily',
