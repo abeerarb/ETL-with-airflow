@@ -1,0 +1,32 @@
+[2024-04-18T00:13:21.874+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job manual__2024-04-14T23:45:47.143457+00:00 map_index=16 [queued]>
+[2024-04-18T00:13:21.963+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job manual__2024-04-14T23:45:47.143457+00:00 map_index=16 [queued]>
+[2024-04-18T00:13:21.963+0000] {taskinstance.py:2193} INFO - Starting attempt 9 of 9
+[2024-04-18T00:13:22.246+0000] {taskinstance.py:2217} INFO - Executing <Mapped(_PythonDecoratedOperator): ETL_job> on 2024-04-14 23:45:47.143457+00:00
+[2024-04-18T00:13:22.283+0000] {standard_task_runner.py:60} INFO - Started process 368266 to run task
+[2024-04-18T00:13:22.322+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'ETL_job', 'manual__2024-04-14T23:45:47.143457+00:00', '--job-id', '6741', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmpw32vprej', '--map-index', '16']
+[2024-04-18T00:13:22.336+0000] {standard_task_runner.py:88} INFO - Job 6741: Subtask ETL_job
+[2024-04-18T00:13:22.620+0000] {task_command.py:423} INFO - Running <TaskInstance: Units_statistics_DAG.ETL_job manual__2024-04-14T23:45:47.143457+00:00 map_index=16 [running]> on host a09da322e808
+[2024-04-18T00:13:23.084+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='ETL_job' AIRFLOW_CTX_EXECUTION_DATE='2024-04-14T23:45:47.143457+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-14T23:45:47.143457+00:00'
+[2024-04-18T00:13:23.085+0000] {Units_dag.py:99} INFO - i: 160000, chunk: 6338
+[2024-04-18T00:13:23.086+0000] {Units_dag.py:100} INFO - child token is::: None
+[2024-04-18T00:13:23.086+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Units_dag.py", line 103, in ETL_job
+    units_list = Utils.get_all_units_api(args[0], args[1],child_token)
+  File "/opt/airflow/dags/utilities.py", line 15, in get_all_units_api
+    response = _ApiCaller.post(Globals.api_endpoint+"units/lists?token="+child_token, data_payload)
+TypeError: can only concatenate str (not "NoneType") to str
+[2024-04-18T00:13:23.131+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=Units_statistics_DAG, task_id=ETL_job, map_index=16, execution_date=20240414T234547, start_date=20240418T001321, end_date=20240418T001323
+[2024-04-18T00:13:23.196+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 6741 for task ETL_job (can only concatenate str (not "NoneType") to str; 368266)
+[2024-04-18T00:13:23.263+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-18T00:13:23.317+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

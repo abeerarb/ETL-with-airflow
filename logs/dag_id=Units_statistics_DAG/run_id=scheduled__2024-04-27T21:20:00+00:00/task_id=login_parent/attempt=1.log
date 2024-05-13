@@ -1,0 +1,14 @@
+[2024-04-27T21:40:01.646+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.login_parent scheduled__2024-04-27T21:20:00+00:00 [queued]>
+[2024-04-27T21:40:01.660+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.login_parent scheduled__2024-04-27T21:20:00+00:00 [queued]>
+[2024-04-27T21:40:01.660+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2024-04-27T21:40:01.680+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): login_parent> on 2024-04-27 21:20:00+00:00
+[2024-04-27T21:40:01.688+0000] {standard_task_runner.py:60} INFO - Started process 599552 to run task
+[2024-04-27T21:40:01.697+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'login_parent', 'scheduled__2024-04-27T21:20:00+00:00', '--job-id', '20218', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmp8e0cis5g']
+[2024-04-27T21:40:01.699+0000] {standard_task_runner.py:88} INFO - Job 20218: Subtask login_parent
+[2024-04-27T21:40:01.785+0000] {task_command.py:423} INFO - Running <TaskInstance: Units_statistics_DAG.login_parent scheduled__2024-04-27T21:20:00+00:00 [running]> on host a09da322e808
+[2024-04-27T21:40:01.946+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='login_parent' AIRFLOW_CTX_EXECUTION_DATE='2024-04-27T21:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-27T21:20:00+00:00'
+[2024-04-27T21:40:02.780+0000] {Units_dag.py:46} INFO - ti context info :eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5hZmFxeS5zYS9hdXRoL2xvZ2luIiwiaWF0IjoxNzE0MjU0MDAyLCJleHAiOjE3MTY4NDYwMDIsIm5iZiI6MTcxNDI1NDAwMiwianRpIjoiVGg0WloycWxRUEI4YUkyRCIsInN1YiI6IjY1N2YwYWQ3M2Y5NzcyOTVjZjA1NTc2YSIsInBydiI6IjI3MGVjZmM3ZWEzZWQ5MzdlYTg0OTM2MmEzYTUwOTEwYzZkOGNlNGYifQ.H11W8GPJY-47HARDiXWIR7AsB2erSrzhtBEyQnMhb-Y
+[2024-04-27T21:40:02.782+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-04-27T21:40:02.797+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=Units_statistics_DAG, task_id=login_parent, execution_date=20240427T212000, start_date=20240427T214001, end_date=20240427T214002
+[2024-04-27T21:40:02.833+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-27T21:40:02.884+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

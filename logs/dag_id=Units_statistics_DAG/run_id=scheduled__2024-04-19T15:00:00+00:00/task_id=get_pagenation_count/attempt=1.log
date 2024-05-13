@@ -1,0 +1,13 @@
+[2024-04-19T16:00:16.953+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.get_pagenation_count scheduled__2024-04-19T15:00:00+00:00 [queued]>
+[2024-04-19T16:00:16.967+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.get_pagenation_count scheduled__2024-04-19T15:00:00+00:00 [queued]>
+[2024-04-19T16:00:16.967+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2024-04-19T16:00:16.987+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): get_pagenation_count> on 2024-04-19 15:00:00+00:00
+[2024-04-19T16:00:16.997+0000] {standard_task_runner.py:60} INFO - Started process 406914 to run task
+[2024-04-19T16:00:17.009+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'get_pagenation_count', 'scheduled__2024-04-19T15:00:00+00:00', '--job-id', '8808', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmpnmebrlsp']
+[2024-04-19T16:00:17.011+0000] {standard_task_runner.py:88} INFO - Job 8808: Subtask get_pagenation_count
+[2024-04-19T16:00:17.105+0000] {task_command.py:423} INFO - Running <TaskInstance: Units_statistics_DAG.get_pagenation_count scheduled__2024-04-19T15:00:00+00:00 [running]> on host a09da322e808
+[2024-04-19T16:00:17.261+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='get_pagenation_count' AIRFLOW_CTX_EXECUTION_DATE='2024-04-19T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-19T15:00:00+00:00'
+[2024-04-19T16:00:22.317+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-04-19T16:00:22.334+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=Units_statistics_DAG, task_id=get_pagenation_count, execution_date=20240419T150000, start_date=20240419T160016, end_date=20240419T160022
+[2024-04-19T16:00:22.402+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-19T16:00:22.454+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

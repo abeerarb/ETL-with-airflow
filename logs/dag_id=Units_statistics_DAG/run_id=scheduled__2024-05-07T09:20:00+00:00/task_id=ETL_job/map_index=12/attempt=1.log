@@ -1,0 +1,64 @@
+[2024-05-07T09:40:14.772+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-05-07T09:20:00+00:00 map_index=12 [queued]>
+[2024-05-07T09:40:14.796+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-05-07T09:20:00+00:00 map_index=12 [queued]>
+[2024-05-07T09:40:14.796+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2024-05-07T09:40:14.879+0000] {taskinstance.py:2217} INFO - Executing <Mapped(_PythonDecoratedOperator): ETL_job> on 2024-05-07 09:20:00+00:00
+[2024-05-07T09:40:14.909+0000] {standard_task_runner.py:60} INFO - Started process 830671 to run task
+[2024-05-07T09:40:14.933+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'ETL_job', 'scheduled__2024-05-07T09:20:00+00:00', '--job-id', '37999', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmplohr15f5', '--map-index', '12']
+[2024-05-07T09:40:14.967+0000] {standard_task_runner.py:88} INFO - Job 37999: Subtask ETL_job
+[2024-05-07T09:40:15.301+0000] {task_command.py:423} INFO - Running <TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-05-07T09:20:00+00:00 map_index=12 [running]> on host a09da322e808
+[2024-05-07T09:40:16.017+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='ETL_job' AIRFLOW_CTX_EXECUTION_DATE='2024-05-07T09:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-07T09:20:00+00:00'
+[2024-05-07T09:40:16.018+0000] {Units_dag.py:98} INFO - i: 120000, chunk: 10000
+[2024-05-07T09:40:16.018+0000] {Units_dag.py:99} INFO - child token is::: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5hZmFxeS5zYS9hdXRoL2xvZ2luX2FzIiwiaWF0IjoxNzE1MDc0ODAzLCJleHAiOjE3MTc2NjY4MDMsIm5iZiI6MTcxNTA3NDgwMywianRpIjoidlZWTFhZUEREUmVDT3ZLRyIsInN1YiI6IjVkNjNlNTFlMDNlZDUyOTJhNDJjMjRlNiIsInBydiI6IjI3MGVjZmM3ZWEzZWQ5MzdlYTg0OTM2MmEzYTUwOTEwYzZkOGNlNGYiLCJsb2dpbl9hc19pZCI6IjY1N2YwYWQ3M2Y5NzcyOTVjZjA1NTc2YSJ9.ONOy21JhOxoGfrij1rKn7tOtv14hQ8K1Gr8v8mXbXn8
+[2024-05-07T09:40:39.546+0000] {Units_dag.py:103} INFO - {'_id': '64cb7f9676a7e533ba359565', 'icon': 'icons/icon.png', 'driver_id': '', 'tailer_id': '', 'profile': {'vehicle_type': '', 'measurement_type': 'count', 'max_capacity': 0, 'vin': '', 'plate_number': '', 'start_operation': '', 'contract_milage': '', 'opening_milage': '', 'model': '', 'fuel_type': '91', 'year': 0, 'seats': 2}, 'device_password': '***', 'device_type': 'gps', 'gateway': False, 'business_types': {'waste': False, 'transportation': True, 'water': False}, 'name': '8803 X D A', 'operation_code': '', 'device_gateway': '', 'skip_sim_information': False, 'imei': '860665057454539', 'sim_number': '+966830031797870', 'sim_serial': '421296732485', 'device_serial': '860665057454539', 'device': 'bce', 'user_id': '625803f9eab5ed53380a3db4', 'created_by': '5e6655bf03ed52e1ab79d301', 'updated_at': '2024-04-18 11:18:59', 'created_at': '2023-08-03 13:21:10', 'custom_fields': [], 'creator': 'amr.ahmed', 'company': '', 'owner': 'sultan-trans-admin', 'last_update': {'dtt': 1715074770000, 'dts': 1715074801752, 'spd': 56, 'ang': 48, 'alt': 180, 'chPrams': {'ePwrV': {'v': 28.032, 'cdt': 1715074770000}, 'di16': {'v': 1, 'cdt': 1714387576000}, 'rssi1': {'v': 50, 'cdt': 1715074770000}, 'di15': {'v': 0, 'cdt': 1713383502000}, 'di14': {'v': 1, 'cdt': 1715071878000}, 'di13': {'v': 0, 'cdt': 1714387576000}, 'di12': {'v': 0, 'cdt': 1714387576000}, 'di11': {'v': 0, 'cdt': 1714387576000}, 'di10': {'v': 0, 'cdt': 1714387576000}, 'di2': {'v': 1, 'cdt': 1713019388000}, 'di1': {'v': 1, 'cdt': 1715065376000}, 'ai4': {'v': 12991, 'cdt': 1715074770000}, 'di4': {'v': 0, 'cdt': 1714387576000}, 'di3': {'v': 0, 'cdt': 1714387576000}, 'di6': {'v': 0, 'cdt': 1714387576000}, 'di5': {'v': 1, 'cdt': 1715065376000}, 'lac1': {'v': 12109, 'cdt': 1715074544000}, 'di8': {'v': 1, 'cdt': 1713019388000}, 'protocol': {'v': 'bce', 'cdt': 1714387576000}, 'di7': {'v': 1, 'cdt': 1715065376000}, 'di9': {'v': 0, 'cdt': 1714560420000}, 'iPwrV': {'v': 4.123, 'cdt': 1715074770000}, 'brk': {'v': '0.02', 'cdt': 1715074754000}, 'cid1': {'v': 50561, 'cdt': 1715074770000}, 'crn': {'v': '0.02', 'cdt': 1715074770000}, 'odometer': {'v': 1132482967, 'cdt': 1715074770000}, 'spd': {'v': 56, 'cdt': 1715074770000}, 'sat': {'v': 12, 'cdt': 1715070716000}, 'hdop': {'v': 1, 'cdt': 1714981784000}, 'accel': {'v': '0.02', 'cdt': 1715074770000}, 'ta': {'v': 0, 'cdt': 1714387576000}, 'mcc1': {'v': 420, 'cdt': 1714650494000}, 'mnc1': {'v': 4, 'cdt': 1713599532000}}, 'prms': {'protocol': 'bce', 'spd': 56, 'sat': 12, 'hdop': 1, 'odometer': 1132482967, 'di16': 1, 'di15': 0, 'di14': 1, 'di13': 0, 'di12': 0, 'di11': 0, 'di10': 0, 'di9': 0, 'di8': 1, 'di7': 1, 'di6': 0, 'di5': 1, 'di4': 0, 'di3': 0, 'di2': 1, 'di1': 1, 'ePwrV': 28.032, 'ai4': 12991, 'iPwrV': 4.123, 'ta': 0, 'mcc1': 420, 'mnc1': 4, 'lac1': 12109, 'cid1': 50561, 'rssi1': 50, 'accel': '0.02', 'brk': '0.02', 'crn': '0.02'}, 'devPrms': ['protocol', 'spd', 'sat', 'hdop', 'odometer', 'di16', 'di15', 'di14', 'di13', 'di12', 'di11', 'di10', 'di9', 'di8', 'di7', 'di6', 'di5', 'di4', 'di3', 'di2', 'di1', 'ePwrV', 'ai4', 'iPwrV', 'ta', 'mcc1', 'mnc1', 'lac1', 'cid1', 'rssi1', 'accel', 'brk', 'crn'], 'old_params': {'protocol': 'bce', 'spd': 61, 'sat': 12, 'hdop': 1, 'odometer': 1140934271, 'di16': 1, 'di15': 0, 'di14': 1, 'di13': 0, 'di12': 0, 'di11': 0, 'di10': 0, 'di9': 0, 'di8': 1, 'di7': 1, 'di6': 0, 'di5': 1, 'di4': 0, 'di3': 0, 'di2': 1, 'di1': 1, 'ePwrV': 28.023, 'ai4': 13043, 'iPwrV': 4.125, 'ta': 0, 'mcc1': 420, 'mnc1': 4, 'lac1': 12109, 'cid1': 50563, 'rssi1': 60, 'accel': '0.00', 'brk': '0.02', 'crn': '0.04'}, 'vLoc': 1, 'vCon': 1, 'ip': '51.39.42.59', 'rl': 0.2573, 'trl': 68012.3731, 'mdu': 16, 'tmdu': 4701938, 'eidl': 0, 'teidl': 4636352, 'fc': 0.030876, 'tfc': 26.278644, 'acc': 1, 'accOn': 9653766, 'accOff': 20641830, 'sdu': 0, 'tsdu': 0, 'lat': 25.945919036865234, 'lng': 49.025291442871094}, 'counters': {'odometer_type': 'gps', 'odometer': 68011.24, 'engine_hours_type': 'acc', 'engine_hours': 9653766, 'last_acc': 1}, 'is_wasl_connected': 'Not Connected', 'iconUrl': 'https://api.afaqy.sa/images/units/icons/icon.png', 'hasCCTV': False}
+[2024-05-07T09:40:40.075+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk1.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-05-07T09:40:40.117+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk3.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-05-07T09:40:40.159+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk2.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-05-07T09:40:40.191+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk1.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2024-05-07T09:40:40.285+0000] {_transport.py:335} INFO - GET https://dbelk1.afaqy.local:9200/_cluster/health [status:200 duration:0.124s]
+[2024-05-07T09:40:40.672+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk3.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2024-05-07T09:40:40.688+0000] {_transport.py:335} INFO - PUT https://dbelk3.afaqy.local:9200/units_statistics_***/_bulk [status:429 duration:0.036s]
+[2024-05-07T09:40:40.688+0000] {_node_pool.py:249} WARNING - Node <Urllib3HttpNode(https://dbelk3.afaqy.local:9200)> has failed for 1 times in a row, putting on 1 second timeout
+[2024-05-07T09:40:40.689+0000] {_transport.py:427} WARNING - Retrying request after non-successful status 429 (attempt 0 of 3)
+[2024-05-07T09:40:40.689+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk1.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2024-05-07T09:40:41.815+0000] {_transport.py:335} INFO - PUT https://dbelk1.afaqy.local:9200/units_statistics_***/_bulk [status:200 duration:1.126s]
+[2024-05-07T09:40:41.881+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Units_dag.py", line 111, in ETL_job
+    Elk_client.elk_pushData(Globals.index_name,units_list_update)
+  File "/opt/airflow/dags/units_statistics/elk_manager.py", line 69, in elk_pushData
+    helpers.bulk(self.elk_client, docs_list, index=index_name, chunk_size=batch)
+  File "/home/airflow/.local/lib/python3.8/site-packages/elasticsearch/helpers/actions.py", line 521, in bulk
+    for ok, item in streaming_bulk(
+  File "/home/airflow/.local/lib/python3.8/site-packages/elasticsearch/helpers/actions.py", line 436, in streaming_bulk
+    for data, (ok, info) in zip(
+  File "/home/airflow/.local/lib/python3.8/site-packages/elasticsearch/helpers/actions.py", line 355, in _process_bulk_chunk
+    yield from gen
+  File "/home/airflow/.local/lib/python3.8/site-packages/elasticsearch/helpers/actions.py", line 274, in _process_bulk_chunk_success
+    raise BulkIndexError(f"{len(errors)} document(s) failed to index.", errors)
+elasticsearch.helpers.BulkIndexError: 1 document(s) failed to index.
+[2024-05-07T09:40:41.899+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=Units_statistics_DAG, task_id=ETL_job, map_index=12, execution_date=20240507T092000, start_date=20240507T094014, end_date=20240507T094041
+[2024-05-07T09:40:41.918+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 37999 for task ETL_job (1 document(s) failed to index.; 830671)
+[2024-05-07T09:40:41.989+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-05-07T09:40:42.020+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

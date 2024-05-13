@@ -1,0 +1,28 @@
+[2024-04-18T00:09:40.610+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.login_child manual__2024-04-16T13:17:45.360338+00:00 [queued]>
+[2024-04-18T00:09:40.656+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.login_child manual__2024-04-16T13:17:45.360338+00:00 [queued]>
+[2024-04-18T00:09:40.657+0000] {taskinstance.py:2193} INFO - Starting attempt 5 of 5
+[2024-04-18T00:09:40.742+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): login_child> on 2024-04-16 13:17:45.360338+00:00
+[2024-04-18T00:09:40.755+0000] {standard_task_runner.py:60} INFO - Started process 366967 to run task
+[2024-04-18T00:09:40.805+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'login_child', 'manual__2024-04-16T13:17:45.360338+00:00', '--job-id', '6134', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmp46yor8hx']
+[2024-04-18T00:09:40.821+0000] {standard_task_runner.py:88} INFO - Job 6134: Subtask login_child
+[2024-04-18T00:09:40.982+0000] {task_command.py:423} INFO - Running <TaskInstance: Units_statistics_DAG.login_child manual__2024-04-16T13:17:45.360338+00:00 [running]> on host a09da322e808
+[2024-04-18T00:09:41.308+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='login_child' AIRFLOW_CTX_EXECUTION_DATE='2024-04-16T13:17:45.360338+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-16T13:17:45.360338+00:00'
+[2024-04-18T00:09:41.359+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Units_dag.py", line 55, in login_child
+    response = _ApiCaller.post(Globals.api_endpoint + "auth/login_as?token=" + parent_token, data_payload)
+TypeError: can only concatenate str (not "NoneType") to str
+[2024-04-18T00:09:41.380+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=Units_statistics_DAG, task_id=login_child, execution_date=20240416T131745, start_date=20240418T000940, end_date=20240418T000941
+[2024-04-18T00:09:41.409+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 6134 for task login_child (can only concatenate str (not "NoneType") to str; 366967)
+[2024-04-18T00:09:41.456+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-18T00:09:41.579+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

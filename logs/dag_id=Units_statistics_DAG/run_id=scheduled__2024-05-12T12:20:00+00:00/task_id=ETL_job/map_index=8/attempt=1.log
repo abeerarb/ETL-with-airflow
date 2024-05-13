@@ -1,0 +1,124 @@
+[2024-05-12T12:40:18.180+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-05-12T12:20:00+00:00 map_index=8 [queued]>
+[2024-05-12T12:40:18.267+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-05-12T12:20:00+00:00 map_index=8 [queued]>
+[2024-05-12T12:40:18.268+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2024-05-12T12:40:18.363+0000] {taskinstance.py:2217} INFO - Executing <Mapped(_PythonDecoratedOperator): ETL_job> on 2024-05-12 12:20:00+00:00
+[2024-05-12T12:40:18.403+0000] {standard_task_runner.py:60} INFO - Started process 3169 to run task
+[2024-05-12T12:40:18.424+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'ETL_job', 'scheduled__2024-05-12T12:20:00+00:00', '--job-id', '54077', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmp8sd6o2a8', '--map-index', '8']
+[2024-05-12T12:40:18.426+0000] {standard_task_runner.py:88} INFO - Job 54077: Subtask ETL_job
+[2024-05-12T12:40:18.854+0000] {task_command.py:423} INFO - Running <TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-05-12T12:20:00+00:00 map_index=8 [running]> on host 3abf70bf7e68
+[2024-05-12T12:40:19.610+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='ETL_job' AIRFLOW_CTX_EXECUTION_DATE='2024-05-12T12:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-12T12:20:00+00:00'
+[2024-05-12T12:40:19.612+0000] {Units_dag.py:98} INFO - i: 80000, chunk: 10000
+[2024-05-12T12:40:19.613+0000] {Units_dag.py:99} INFO - child token is::: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5hZmFxeS5zYS9hdXRoL2xvZ2luX2FzIiwiaWF0IjoxNzE1NTE3NjAzLCJleHAiOjE3MTgxMDk2MDMsIm5iZiI6MTcxNTUxNzYwMywianRpIjoiU0x1bzYyRkR6RFc3UXlUVCIsInN1YiI6IjVkNjNlNTFlMDNlZDUyOTJhNDJjMjRlNiIsInBydiI6IjI3MGVjZmM3ZWEzZWQ5MzdlYTg0OTM2MmEzYTUwOTEwYzZkOGNlNGYiLCJsb2dpbl9hc19pZCI6IjY1N2YwYWQ3M2Y5NzcyOTVjZjA1NTc2YSJ9.sf1l2P-PzFj-f9eG6EpqpqrspZKs6tYYcUtAKvdx8XA
+[2024-05-12T12:41:09.086+0000] {Units_dag.py:103} INFO - {'_id': '63da0b4814786413ea7c82cc', 'icon': 'icons/29.png', 'driver_id': '', 'tailer_id': '', 'profile': {'vehicle_type': None, 'measurement_type': 'count', 'max_capacity': 0, 'vin': None, 'plate_number': None, 'start_operation': None, 'contract_milage': None, 'opening_milage': None, 'model': None, 'fuel_type': '91', 'year': 0, 'seats': 2}, 'device_password': '***', 'device_type': 'gps', 'gateway': False, 'name': '1818', 'operation_code': '913', 'device_gateway': '', 'business_types': {'waste': False, 'transportation': False, 'water': False, 'hajj': True}, 'imei': '869688059368573', 'sim_number': '+966830031790089', 'sim_serial': '21296720472', 'device_serial': '869688059368573', 'device': 'bce', 'user_id': '6256d946674c9170c17c2e61', 'created_by': '5e66590a03ed52e138045638', 'updated_at': '2024-04-18 11:18:59', 'created_at': '2023-02-01 09:48:40', 'custom_fields': [], 'creator': 'mohamed.nabil', 'company': 'مؤسسة فاروق جميل خوقير لنقل الحجاج', 'owner': 'farouk-khoker-hajj', 'last_update': {'dtt': 1713448338000, 'dts': 1713448442542, 'spd': 0, 'ang': 0, 'alt': 173, 'chPrams': {'plus07gTime': {'v': 0, 'cdt': 1711540406000}, 'minus01gTime': {'v': 0, 'cdt': 1711540406000}, 'plus01gTime': {'v': 0, 'cdt': 1711540406000}, 'j1939_fuel_rate': {'v': 0, 'cdt': 1713438108000}, 'can_engine_hrs': {'v': 0, 'cdt': 1711540406000}, 'minus06gTime': {'v': 0, 'cdt': 1711540406000}, 'j1939_air_temp': {'v': 0, 'cdt': 1711540406000}, 'protocol': {'v': 'bce', 'cdt': 1711540406000}, 'iPwrV': {'v': 3.585, 'cdt': 1713448338000}, 'brk': {'v': '0.00', 'cdt': 1712435698000}, 'j1939_mil_stat': {'v': '00', 'cdt': 1711540406000}, 'cid1': {'v': 55643, 'cdt': 1712435516000}, 'minus10gTime': {'v': 0, 'cdt': 1711540406000}, 'minus02gTime': {'v': 0, 'cdt': 1711540406000}, '0gTime': {'v': 0, 'cdt': 1711540406000}, 'j1939_fl_con': {'v': 0, 'cdt': 1711540406000}, 'wheel_speed': {'v': 0, 'cdt': 1712435666000}, 'minus05gTime': {'v': 0, 'cdt': 1711540406000}, 'odometer': {'v': 0, 'cdt': 1712435474000}, 'minus08gTime': {'v': 0, 'cdt': 1711540406000}, 'spd': {'v': 0, 'cdt': 1712435486000}, 'rpm_limit': {'v': 0, 'cdt': 1712435430000}, 'plus03gTime': {'v': 0, 'cdt': 1711540406000}, 'plus09gTime': {'v': 0, 'cdt': 1711540406000}, 'plus06gTime': {'v': 0, 'cdt': 1711540406000}, 'minus03gTime': {'v': 0, 'cdt': 1711540406000}, 'j1939_eng_load': {'v': 0, 'cdt': 1713438108000}, 'can_fls': {'v': 0, 'cdt': 1711540406000}, 'j1939_axle_wgt': {'v': 0, 'cdt': 1711540406000}, 'mnc1': {'v': 4, 'cdt': 1711540406000}, 'acc_pedal': {'v': 0, 'cdt': 1713429228000}, 'total_fuel': {'v': 2461, 'cdt': 1713437808000}, 'plus04gTime': {'v': 0, 'cdt': 1711540406000}, 'ePwrV': {'v': 0, 'cdt': 1713438108000}, 'di16': {'v': 1, 'cdt': 1711540406000}, 'di15': {'v': 0, 'cdt': 1675234260000}, 'rssi1': {'v': 66, 'cdt': 1713446238000}, 'di14': {'v': 0, 'cdt': 1713438108000}, 'minus04gTime': {'v': 0, 'cdt': 1711540406000}, 'di13': {'v': 0, 'cdt': 1711540406000}, 'di12': {'v': 0, 'cdt': 1713438108000}, 'can_rpm': {'v': 3840, 'cdt': 1713438108000}, 'di11': {'v': 0, 'cdt': 1711540406000}, 'axle5': {'v': 0, 'cdt': 1711540406000}, 'can_mileage': {'v': 22948120, 'cdt': 1712435546000}, 'fuel_con_ins': {'v': 0, 'cdt': 1713438138000}, 'di10': {'v': 0, 'cdt': 1711540406000}, 'axle4': {'v': 0, 'cdt': 1711540406000}, 'di2': {'v': 0, 'cdt': 1711540406000}, 'axle3': {'v': 0, 'cdt': 1711540406000}, 'di1': {'v': 0, 'cdt': 1713438108000}, 'axle2': {'v': 0, 'cdt': 1711540406000}, 'di4': {'v': 0, 'cdt': 1711540406000}, 'axle1': {'v': 0, 'cdt': 1711540406000}, 'di3': {'v': 0, 'cdt': 1711540406000}, 'di6': {'v': 0, 'cdt': 1711540406000}, 'di5': {'v': 0, 'cdt': 1713438108000}, 'j1939_flfmseco': {'v': 65024, 'cdt': 1713438108000}, 'lac1': {'v': 52008, 'cdt': 1713429258000}, 'di8': {'v': 0, 'cdt': 1713438108000}, 'di7': {'v': 0, 'cdt': 1713438138000}, 'engine_temp': {'v': 114, 'cdt': 1713431208000}, 'minus09gTime': {'v': 0, 'cdt': 1711540406000}, 'di9': {'v': 0, 'cdt': 1711540406000}, 'crn': {'v': '0.00', 'cdt': 1712435474000}, 'sat': {'v': 12, 'cdt': 1713432858000}, 'j1939_srv_dist': {'v': 0, 'cdt': 1711540406000}, 'ta': {'v': 0, 'cdt': 1711540406000}, 'accel': {'v': '0.00', 'cdt': 1712435698000}, 'hdop': {'v': 1, 'cdt': 1711830148000}, 'plus02gTime': {'v': 0, 'cdt': 1711540406000}, 'plus05gTime': {'v': 0, 'cdt': 1711540406000}, 'j1939_fuel_lvl2': {'v': 0, 'cdt': 1711540406000}, 'mcc1': {'v': 420, 'cdt': 1711540406000}, 'plus08gTime': {'v': 0, 'cdt': 1711540406000}, 'minus07gTime': {'v': 0, 'cdt': 1711540406000}, 'plus10gTime': {'v': 0, 'cdt': 1711540406000}}, 'prms': {'protocol': 'bce', 'spd': 0, 'sat': 12, 'hdop': 1, 'odometer': 0, 'di16': 1, 'di15': 0, 'di14': 0, 'di13': 0, 'di12': 0, 'di11': 0, 'di10': 0, 'di9': 0, 'di8': 0, 'di7': 0, 'di6': 0, 'di5': 0, 'di4': 0, 'di3': 0, 'di2': 0, 'di1': 0, 'ePwrV': 0, 'iPwrV': 3.585, 'ta': 0, 'mcc1': 420, 'mnc1': 4, 'lac1': 52008, 'cid1': 55643, 'rssi1': 66, 'wheel_speed': 0, 'acc_pedal': 0, 'total_fuel': 2461, 'can_fls': 0, 'can_rpm': 3840, 'can_engine_hrs': 0, 'can_mileage': 22948120, 'engine_temp': 114, 'j1939_fuel_lvl2': 0, 'j1939_eng_load': 0, 'j1939_srv_dist': 0, 'j1939_air_temp': 0, 'j1939_fuel_rate': 0, 'j1939_flfmseco': 65024, 'j1939_fl_con': 0, 'j1939_axle_wgt': 0, 'j1939_mil_stat': '00', 'minus10gTime': 0, 'minus09gTime': 0, 'minus08gTime': 0, 'minus07gTime': 0, 'minus06gTime': 0, 'minus05gTime': 0, 'minus04gTime': 0, 'minus03gTime': 0, 'minus02gTime': 0, 'minus01gTime': 0, '0gTime': 0, 'plus01gTime': 0, 'plus02gTime': 0, 'plus03gTime': 0, 'plus04gTime': 0, 'plus05gTime': 0, 'plus06gTime': 0, 'plus07gTime': 0, 'plus08gTime': 0, 'plus09gTime': 0, 'plus10gTime': 0, 'fuel_con_ins': 0, 'axle1': 0, 'axle2': 0, 'axle3': 0, 'axle4': 0, 'axle5': 0, 'accel': '0.00', 'brk': '0.00', 'crn': '0.00', 'rpm_limit': 0}, 'devPrms': ['protocol', 'spd', 'sat', 'hdop', 'odometer', 'di16', 'di15', 'di14', 'di13', 'di12', 'di11', 'di10', 'di9', 'di8', 'di7', 'di6', 'di5', 'di4', 'di3', 'di2', 'di1', 'ePwrV', 'iPwrV', 'ta', 'mcc1', 'mnc1', 'lac1', 'cid1', 'rssi1', 'wheel_speed', 'acc_pedal', 'total_fuel', 'can_fls', 'can_rpm', 'can_engine_hrs', 'can_mileage', 'engine_temp', 'j1939_fuel_lvl2', 'j1939_eng_load', 'j1939_srv_dist', 'j1939_air_temp', 'j1939_fuel_rate', 'j1939_flfmseco', 'j1939_fl_con', 'j1939_axle_wgt', 'j1939_mil_stat', 'minus10gTime', 'minus09gTime', 'minus08gTime', 'minus07gTime', 'minus06gTime', 'minus05gTime', 'minus04gTime', 'minus03gTime', 'minus02gTime', 'minus01gTime', '0gTime', 'plus01gTime', 'plus02gTime', 'plus03gTime', 'plus04gTime', 'plus05gTime', 'plus06gTime', 'plus07gTime', 'plus08gTime', 'plus09gTime', 'plus10gTime', 'fuel_con_ins', 'axle1', 'axle2', 'axle3', 'axle4', 'axle5', 'accel', 'brk', 'crn', 'rpm_limit'], 'old_params': {'plus07gTime': 0, 'minus01gTime': 0, 'plus01gTime': 0, 'j1939_fuel_rate': 0, 'can_engine_hrs': 0, 'minus06gTime': 0, 'j1939_air_temp': 0, 'protocol': 'bce', 'iPwrV': 3.604, 'brk': '0.00', 'j1939_mil_stat': '00', 'cid1': 55643, 'minus10gTime': 0, 'minus02gTime': 0, '0gTime': 0, 'j1939_fl_con': 0, 'wheel_speed': 0, 'minus05gTime': 0, 'odometer': 0, 'spd': 0, 'minus08gTime': 0, 'rpm_limit': 0, 'plus03gTime': 0, 'plus09gTime': 0, 'plus06gTime': 0, 'minus03gTime': 0, 'j1939_eng_load': 0, 'can_fls': 0, 'j1939_axle_wgt': 0, 'mnc1': 4, 'acc_pedal': 0, 'total_fuel': 2461, 'plus04gTime': 0, 'di16': 1, 'ePwrV': 0, 'di15': 0, 'rssi1': 66, 'di14': 0, 'minus04gTime': 0, 'di13': 0, 'di12': 0, 'di11': 0, 'can_rpm': 3840, 'can_mileage': 22948120, 'axle5': 0, 'di10': 0, 'fuel_con_ins': 0, 'axle4': 0, 'di2': 0, 'axle3': 0, 'di1': 0, 'axle2': 0, 'di4': 0, 'axle1': 0, 'di3': 0, 'di6': 0, 'di5': 0, 'lac1': 52008, 'j1939_flfmseco': 65024, 'di8': 0, 'di7': 0, 'engine_temp': 114, 'minus09gTime': 0, 'di9': 0, 'crn': '0.00', 'sat': 12, 'j1939_srv_dist': 0, 'hdop': 1, 'ta': 0, 'accel': '0.00', 'plus02gTime': 0, 'plus05gTime': 0, 'j1939_fuel_lvl2': 0, 'mcc1': 420, 'plus08gTime': 0, 'minus07gTime': 0, 'plus10gTime': 0}, 'vLoc': 1, 'vCon': 1, 'ip': '51.39.52.54', 'rl': 0, 'trl': 6696.4795, 'mdu': 0, 'tmdu': 437762, 'eidl': 0, 'teidl': 2357620, 'fc': 0, 'tfc': 10.34533, 'acc': 0, 'accOn': 18051386, 'accOff': 22999228, 'sdu': 300, 'tsdu': 10230, 'lat': 21.430856704711914, 'lng': 39.723751068115234}, 'counters': {'odometer_type': 'gps', 'odometer': 6696.4795, 'engine_hours_type': 'acc', 'engine_hours': 18051386, 'last_acc': 0}, 'is_wasl_connected': 'Connected', 'iconUrl': 'https://api.afaqy.sa/images/units/icons/29.png', 'hasCCTV': False}
+[2024-05-12T12:41:22.289+0000] {job.py:213} ERROR - Job heartbeat got an exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "postgres" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/jobs/job.py", line 208, in heartbeat
+    heartbeat_callback(session)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/jobs/local_task_job_runner.py", line 252, in heartbeat_callback
+    self.task_instance.refresh_from_db()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1748, in refresh_from_db
+    _refresh_from_db(task_instance=self, session=session, lock_for_update=lock_for_update)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 475, in _refresh_from_db
+    ti = TaskInstance.get_task_instance(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/api_internal/internal_api_call.py", line 114, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1734, in get_task_instance
+    return query.one_or_none()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2850, in one_or_none
+    return self._iter().one_or_none()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2024-05-12T12:41:22.825+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2024-05-12T12:41:22.826+0000] {local_task_job_runner.py:234} INFO - Task exited with return code -9
+[2024-05-12T12:41:23.145+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

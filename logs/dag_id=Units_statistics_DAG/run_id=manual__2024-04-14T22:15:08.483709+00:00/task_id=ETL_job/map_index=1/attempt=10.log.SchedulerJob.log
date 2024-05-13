@@ -1,0 +1,1 @@
+[2024-04-18T00:11:54.017+0000] {scheduler_job_runner.py:781} ERROR - Executor reports task instance <TaskInstance: Units_statistics_DAG.ETL_job manual__2024-04-14T22:15:08.483709+00:00 map_index=1 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

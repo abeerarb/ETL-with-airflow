@@ -1,0 +1,60 @@
+[2024-05-13T06:00:13.008+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-13T06:00:13.049+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.split_data_into_chunks scheduled__2024-05-13T05:40:00+00:00 [queued]>
+[2024-05-13T06:00:13.064+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.split_data_into_chunks scheduled__2024-05-13T05:40:00+00:00 [queued]>
+[2024-05-13T06:00:13.064+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 4
+[2024-05-13T06:00:13.087+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonDecoratedOperator): split_data_into_chunks> on 2024-05-13 05:40:00+00:00
+[2024-05-13T06:00:13.095+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=13037) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-13T06:00:13.098+0000] {standard_task_runner.py:63} INFO - Started process 13038 to run task
+[2024-05-13T06:00:13.102+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'split_data_into_chunks', 'scheduled__2024-05-13T05:40:00+00:00', '--job-id', '55352', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmpg4ogmc8s']
+[2024-05-13T06:00:13.107+0000] {standard_task_runner.py:91} INFO - Job 55352: Subtask split_data_into_chunks
+[2024-05-13T06:00:13.196+0000] {task_command.py:426} INFO - Running <TaskInstance: Units_statistics_DAG.split_data_into_chunks scheduled__2024-05-13T05:40:00+00:00 [running]> on host 7138d7e072c5
+[2024-05-13T06:00:13.372+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='split_data_into_chunks' AIRFLOW_CTX_EXECUTION_DATE='2024-05-13T05:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-13T05:40:00+00:00'
+[2024-05-13T06:00:13.374+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-13T06:00:13.394+0000] {Units_dag.py:77} INFO - type of length is :<class 'int'>
+[2024-05-13T06:00:13.877+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk2.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-05-13T06:00:13.930+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk1.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-05-13T06:00:13.979+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk3.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-05-13T06:00:14.007+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk2.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[2024-05-13T06:00:14.073+0000] {_transport.py:349} INFO - GET https://dbelk2.afaqy.local:9200/_cluster/health [status:200 duration:0.092s]
+[2024-05-13T06:00:14.097+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk1.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[2024-05-13T06:00:14.104+0000] {_transport.py:349} INFO - HEAD https://dbelk1.afaqy.local:9200/units_statistics_*** [status:200 duration:0.028s]
+[2024-05-13T06:00:14.127+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk3.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[2024-05-13T06:00:14.534+0000] {_transport.py:349} INFO - DELETE https://dbelk3.afaqy.local:9200/units_statistics_*** [status:200 duration:0.429s]
+[2024-05-13T06:00:14.536+0000] {Units_dag.py:90} INFO - i = 0, chunk = 10000
+[2024-05-13T06:00:14.537+0000] {Units_dag.py:90} INFO - i = 10000, chunk = 10000
+[2024-05-13T06:00:14.538+0000] {Units_dag.py:90} INFO - i = 20000, chunk = 10000
+[2024-05-13T06:00:14.538+0000] {Units_dag.py:90} INFO - i = 30000, chunk = 10000
+[2024-05-13T06:00:14.538+0000] {Units_dag.py:90} INFO - i = 40000, chunk = 10000
+[2024-05-13T06:00:14.539+0000] {Units_dag.py:90} INFO - i = 50000, chunk = 10000
+[2024-05-13T06:00:14.539+0000] {Units_dag.py:90} INFO - i = 60000, chunk = 10000
+[2024-05-13T06:00:14.540+0000] {Units_dag.py:90} INFO - i = 70000, chunk = 10000
+[2024-05-13T06:00:14.540+0000] {Units_dag.py:90} INFO - i = 80000, chunk = 10000
+[2024-05-13T06:00:14.540+0000] {Units_dag.py:90} INFO - i = 90000, chunk = 10000
+[2024-05-13T06:00:14.540+0000] {Units_dag.py:90} INFO - i = 100000, chunk = 10000
+[2024-05-13T06:00:14.541+0000] {Units_dag.py:90} INFO - i = 110000, chunk = 10000
+[2024-05-13T06:00:14.541+0000] {Units_dag.py:90} INFO - i = 120000, chunk = 10000
+[2024-05-13T06:00:14.541+0000] {Units_dag.py:90} INFO - i = 130000, chunk = 10000
+[2024-05-13T06:00:14.541+0000] {Units_dag.py:90} INFO - i = 140000, chunk = 10000
+[2024-05-13T06:00:14.541+0000] {Units_dag.py:90} INFO - i = 150000, chunk = 10000
+[2024-05-13T06:00:14.541+0000] {Units_dag.py:90} INFO - i = 160000, chunk = 10000
+[2024-05-13T06:00:14.542+0000] {Units_dag.py:90} INFO - i = 170000, chunk = 2043
+[2024-05-13T06:00:14.569+0000] {python.py:237} INFO - Done. Returned value was: [[0, 10000], [10000, 10000], [20000, 10000], [30000, 10000], [40000, 10000], [50000, 10000], [60000, 10000], [70000, 10000], [80000, 10000], [90000, 10000], [100000, 10000], [110000, 10000], [120000, 10000], [130000, 10000], [140000, 10000], [150000, 10000], [160000, 10000], [170000, 2043]]
+[2024-05-13T06:00:14.570+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-13T06:00:14.627+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Units_statistics_DAG, task_id=split_data_into_chunks, run_id=scheduled__2024-05-13T05:40:00+00:00, execution_date=20240513T054000, start_date=20240513T060013, end_date=20240513T060014
+[2024-05-13T06:00:14.681+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-13T06:00:14.954+0000] {taskinstance.py:3498} INFO - 18 downstream tasks scheduled from follow-on schedule check
+[2024-05-13T06:00:14.956+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

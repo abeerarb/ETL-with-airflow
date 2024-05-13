@@ -1,0 +1,52 @@
+[2024-04-25T19:00:12.449+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.split_data_into_chunks scheduled__2024-04-25T18:40:00+00:00 [queued]>
+[2024-04-25T19:00:12.469+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.split_data_into_chunks scheduled__2024-04-25T18:40:00+00:00 [queued]>
+[2024-04-25T19:00:12.470+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2024-04-25T19:00:12.493+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): split_data_into_chunks> on 2024-04-25 18:40:00+00:00
+[2024-04-25T19:00:12.503+0000] {standard_task_runner.py:60} INFO - Started process 549268 to run task
+[2024-04-25T19:00:12.511+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'split_data_into_chunks', 'scheduled__2024-04-25T18:40:00+00:00', '--job-id', '16768', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmpcd0vq1jl']
+[2024-04-25T19:00:12.514+0000] {standard_task_runner.py:88} INFO - Job 16768: Subtask split_data_into_chunks
+[2024-04-25T19:00:12.617+0000] {task_command.py:423} INFO - Running <TaskInstance: Units_statistics_DAG.split_data_into_chunks scheduled__2024-04-25T18:40:00+00:00 [running]> on host a09da322e808
+[2024-04-25T19:00:12.794+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='split_data_into_chunks' AIRFLOW_CTX_EXECUTION_DATE='2024-04-25T18:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-25T18:40:00+00:00'
+[2024-04-25T19:00:12.823+0000] {Units_dag.py:78} INFO - type of length is :<class 'int'>
+[2024-04-25T19:00:13.371+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk1.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-04-25T19:00:13.423+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk2.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-04-25T19:00:13.472+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk3.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-04-25T19:00:13.507+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk1.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2024-04-25T19:00:13.559+0000] {_transport.py:335} INFO - GET https://dbelk1.afaqy.local:9200/_cluster/health [status:200 duration:0.085s]
+[2024-04-25T19:00:13.587+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk2.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2024-04-25T19:00:13.593+0000] {_transport.py:335} INFO - HEAD https://dbelk2.afaqy.local:9200/units_statistics_*** [status:200 duration:0.031s]
+[2024-04-25T19:00:13.614+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk3.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2024-04-25T19:00:14.002+0000] {_transport.py:335} INFO - DELETE https://dbelk3.afaqy.local:9200/units_statistics_*** [status:200 duration:0.408s]
+[2024-04-25T19:00:14.004+0000] {Units_dag.py:91} INFO - i = 0, chunk = 10000
+[2024-04-25T19:00:14.004+0000] {Units_dag.py:91} INFO - i = 10000, chunk = 10000
+[2024-04-25T19:00:14.005+0000] {Units_dag.py:91} INFO - i = 20000, chunk = 10000
+[2024-04-25T19:00:14.005+0000] {Units_dag.py:91} INFO - i = 30000, chunk = 10000
+[2024-04-25T19:00:14.005+0000] {Units_dag.py:91} INFO - i = 40000, chunk = 10000
+[2024-04-25T19:00:14.005+0000] {Units_dag.py:91} INFO - i = 50000, chunk = 10000
+[2024-04-25T19:00:14.006+0000] {Units_dag.py:91} INFO - i = 60000, chunk = 10000
+[2024-04-25T19:00:14.006+0000] {Units_dag.py:91} INFO - i = 70000, chunk = 10000
+[2024-04-25T19:00:14.006+0000] {Units_dag.py:91} INFO - i = 80000, chunk = 10000
+[2024-04-25T19:00:14.007+0000] {Units_dag.py:91} INFO - i = 90000, chunk = 10000
+[2024-04-25T19:00:14.007+0000] {Units_dag.py:91} INFO - i = 100000, chunk = 10000
+[2024-04-25T19:00:14.007+0000] {Units_dag.py:91} INFO - i = 110000, chunk = 10000
+[2024-04-25T19:00:14.008+0000] {Units_dag.py:91} INFO - i = 120000, chunk = 10000
+[2024-04-25T19:00:14.008+0000] {Units_dag.py:91} INFO - i = 130000, chunk = 10000
+[2024-04-25T19:00:14.008+0000] {Units_dag.py:91} INFO - i = 140000, chunk = 10000
+[2024-04-25T19:00:14.008+0000] {Units_dag.py:91} INFO - i = 150000, chunk = 10000
+[2024-04-25T19:00:14.009+0000] {Units_dag.py:91} INFO - i = 160000, chunk = 8101
+[2024-04-25T19:00:14.040+0000] {python.py:202} INFO - Done. Returned value was: [[0, 10000], [10000, 10000], [20000, 10000], [30000, 10000], [40000, 10000], [50000, 10000], [60000, 10000], [70000, 10000], [80000, 10000], [90000, 10000], [100000, 10000], [110000, 10000], [120000, 10000], [130000, 10000], [140000, 10000], [150000, 10000], [160000, 8101]]
+[2024-04-25T19:00:14.085+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=Units_statistics_DAG, task_id=split_data_into_chunks, execution_date=20240425T184000, start_date=20240425T190012, end_date=20240425T190014
+[2024-04-25T19:00:14.135+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-25T19:00:14.361+0000] {taskinstance.py:3312} INFO - 17 downstream tasks scheduled from follow-on schedule check

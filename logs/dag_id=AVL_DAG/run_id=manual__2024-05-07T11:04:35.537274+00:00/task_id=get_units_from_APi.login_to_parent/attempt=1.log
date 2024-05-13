@@ -1,0 +1,14 @@
+[2024-05-07T11:04:37.462+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AVL_DAG.get_units_from_APi.login_to_parent manual__2024-05-07T11:04:35.537274+00:00 [queued]>
+[2024-05-07T11:04:37.507+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AVL_DAG.get_units_from_APi.login_to_parent manual__2024-05-07T11:04:35.537274+00:00 [queued]>
+[2024-05-07T11:04:37.508+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2024-05-07T11:04:37.555+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): get_units_from_APi.login_to_parent> on 2024-05-07 11:04:35.537274+00:00
+[2024-05-07T11:04:37.562+0000] {standard_task_runner.py:60} INFO - Started process 832249 to run task
+[2024-05-07T11:04:37.580+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'AVL_DAG', 'get_units_from_APi.login_to_parent', 'manual__2024-05-07T11:04:35.537274+00:00', '--job-id', '38189', '--raw', '--subdir', 'DAGS_FOLDER/Avl_dag.py', '--cfg-path', '/tmp/tmpiqxo86__']
+[2024-05-07T11:04:37.582+0000] {standard_task_runner.py:88} INFO - Job 38189: Subtask get_units_from_APi.login_to_parent
+[2024-05-07T11:04:37.660+0000] {task_command.py:423} INFO - Running <TaskInstance: AVL_DAG.get_units_from_APi.login_to_parent manual__2024-05-07T11:04:35.537274+00:00 [running]> on host a09da322e808
+[2024-05-07T11:04:37.801+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='AVL_DAG' AIRFLOW_CTX_TASK_ID='get_units_from_APi.login_to_parent' AIRFLOW_CTX_EXECUTION_DATE='2024-05-07T11:04:35.537274+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-07T11:04:35.537274+00:00'
+[2024-05-07T11:04:38.449+0000] {apis_group.py:20} INFO - ti context info :None
+[2024-05-07T11:04:38.451+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-05-07T11:04:38.466+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=AVL_DAG, task_id=get_units_from_APi.login_to_parent, execution_date=20240507T110435, start_date=20240507T110437, end_date=20240507T110438
+[2024-05-07T11:04:38.510+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-07T11:04:38.563+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

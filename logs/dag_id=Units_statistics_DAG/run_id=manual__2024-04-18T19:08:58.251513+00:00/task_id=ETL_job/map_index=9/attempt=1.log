@@ -1,0 +1,13 @@
+[2024-04-18T19:09:23.011+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job manual__2024-04-18T19:08:58.251513+00:00 map_index=9 [queued]>
+[2024-04-18T19:09:23.086+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job manual__2024-04-18T19:08:58.251513+00:00 map_index=9 [queued]>
+[2024-04-18T19:09:23.087+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2024-04-18T19:09:23.251+0000] {taskinstance.py:2217} INFO - Executing <Mapped(_PythonDecoratedOperator): ETL_job> on 2024-04-18 19:08:58.251513+00:00
+[2024-04-18T19:09:23.297+0000] {standard_task_runner.py:60} INFO - Started process 386851 to run task
+[2024-04-18T19:09:23.354+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'ETL_job', 'manual__2024-04-18T19:08:58.251513+00:00', '--job-id', '7850', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmp7re6bnep', '--map-index', '9']
+[2024-04-18T19:09:23.356+0000] {standard_task_runner.py:88} INFO - Job 7850: Subtask ETL_job
+[2024-04-18T19:09:23.753+0000] {task_command.py:423} INFO - Running <TaskInstance: Units_statistics_DAG.ETL_job manual__2024-04-18T19:08:58.251513+00:00 map_index=9 [running]> on host a09da322e808
+[2024-04-18T19:09:24.395+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='ETL_job' AIRFLOW_CTX_EXECUTION_DATE='2024-04-18T19:08:58.251513+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-18T19:08:58.251513+00:00'
+[2024-04-18T19:09:24.397+0000] {Units_dag.py:99} INFO - i: 90000, chunk: 10000
+[2024-04-18T19:09:24.397+0000] {Units_dag.py:100} INFO - child token is::: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5hZmFxeS5zYS9hdXRoL2xvZ2luX2FzIiwiaWF0IjoxNzEzNDY3MzUzLCJleHAiOjE3MTYwNTkzNTMsIm5iZiI6MTcxMzQ2NzM1MywianRpIjoibXdsR1pRSUltMkEyQVh6eCIsInN1YiI6IjVkNjNlNTFlMDNlZDUyOTJhNDJjMjRlNiIsInBydiI6IjI3MGVjZmM3ZWEzZWQ5MzdlYTg0OTM2MmEzYTUwOTEwYzZkOGNlNGYiLCJsb2dpbl9hc19pZCI6IjY1N2YwYWQ3M2Y5NzcyOTVjZjA1NTc2YSJ9.OOoZqbnulT-1U9m_MgXZL2sZ8AhXaETOtomhp2qFnvA
+[2024-04-18T19:10:04.705+0000] {local_task_job_runner.py:234} INFO - Task exited with return code -9
+[2024-04-18T19:10:04.840+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

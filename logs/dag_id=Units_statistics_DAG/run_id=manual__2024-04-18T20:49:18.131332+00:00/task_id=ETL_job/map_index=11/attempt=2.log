@@ -1,0 +1,73 @@
+[2024-04-18T20:51:17.855+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job manual__2024-04-18T20:49:18.131332+00:00 map_index=11 [queued]>
+[2024-04-18T20:51:17.868+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job manual__2024-04-18T20:49:18.131332+00:00 map_index=11 [queued]>
+[2024-04-18T20:51:17.869+0000] {taskinstance.py:2193} INFO - Starting attempt 2 of 4
+[2024-04-18T20:51:17.887+0000] {taskinstance.py:2217} INFO - Executing <Mapped(_PythonDecoratedOperator): ETL_job> on 2024-04-18 20:49:18.131332+00:00
+[2024-04-18T20:51:17.893+0000] {standard_task_runner.py:60} INFO - Started process 389153 to run task
+[2024-04-18T20:51:17.899+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'ETL_job', 'manual__2024-04-18T20:49:18.131332+00:00', '--job-id', '8227', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmpngdinb5s', '--map-index', '11']
+[2024-04-18T20:51:17.901+0000] {standard_task_runner.py:88} INFO - Job 8227: Subtask ETL_job
+[2024-04-18T20:51:17.975+0000] {task_command.py:423} INFO - Running <TaskInstance: Units_statistics_DAG.ETL_job manual__2024-04-18T20:49:18.131332+00:00 map_index=11 [running]> on host a09da322e808
+[2024-04-18T20:51:18.140+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='ETL_job' AIRFLOW_CTX_EXECUTION_DATE='2024-04-18T20:49:18.131332+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-18T20:49:18.131332+00:00'
+[2024-04-18T20:51:18.141+0000] {Units_dag.py:99} INFO - i: 110000, chunk: 10000
+[2024-04-18T20:51:18.141+0000] {Units_dag.py:100} INFO - child token is::: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5hZmFxeS5zYS9hdXRoL2xvZ2luX2FzIiwiaWF0IjoxNzEzNDczMzYxLCJleHAiOjE3MTYwNjUzNjEsIm5iZiI6MTcxMzQ3MzM2MSwianRpIjoiQlgwb2FkNkk3NDJqTERFYyIsInN1YiI6IjVkNjNlNTFlMDNlZDUyOTJhNDJjMjRlNiIsInBydiI6IjI3MGVjZmM3ZWEzZWQ5MzdlYTg0OTM2MmEzYTUwOTEwYzZkOGNlNGYiLCJsb2dpbl9hc19pZCI6IjY1N2YwYWQ3M2Y5NzcyOTVjZjA1NTc2YSJ9.jUxVDsdP3kwbNDaUDoW51L6ZFk-tlyzClikwApbRy14
+[2024-04-18T20:51:39.271+0000] {Units_dag.py:104} INFO - {'_id': '6486f0489534cf76e503e2b0', 'icon': 'icons/icon.png', 'driver_id': '', 'tailer_id': '', 'profile': {'vehicle_type': '', 'measurement_type': 'count', 'max_capacity': 0, 'vin': '', 'plate_number': '', 'start_operation': '', 'contract_milage': '', 'opening_milage': '', 'model': '', 'fuel_type': '91', 'year': 0, 'seats': 2}, 'device_password': '***', 'device_type': 'gps', 'gateway': False, 'business_types': {'waste': False, 'transportation': True, 'water': False}, 'name': '1328 ر ص ص', 'operation_code': 'Enter_634fdfca-0942-4dff-925f-331e59deeb16', 'device_gateway': '', 'skip_sim_information': False, 'imei': '861937062926689', 'sim_number': '+966830031819882', 'sim_serial': '421296805404', 'device_serial': '861937062926689', 'device': 'bceIotm', 'user_id': '62f2797ba0b44a15ac782151', 'created_by': '5e6655bf03ed52e1ab79d301', 'updated_at': '2024-04-18 11:18:59', 'created_at': '2023-06-12 13:15:36', 'custom_fields': [], 'creator': 'amr.ahmed', 'company': '', 'owner': 'almanzoma-admin', 'last_update': {'dtt': 1693898176000, 'dts': 1693898181762, 'spd': 0, 'ang': 0, 'alt': 336, 'chPrams': {'acc': {'v': 1, 'cdt': 1693886989000}, 'sensor_8192': {'v': 0, 'cdt': 1693891165000}, 'sensor_16386': {'v': 0, 'cdt': 1692622714000}, 'sensor_16385': {'v': 550, 'cdt': 1693898016000}, 'fw_name': {'v': 'FF0_01_122', 'cdt': 1692959257000}, 'ePwrV': {'v': 13314, 'cdt': 1693898172000}, 'sensor_8197': {'v': 51, 'cdt': 1692622377000}, 'sensor_8199': {'v': 26, 'cdt': 1693897148000}, 'sensor_16387': {'v': 1922200, 'cdt': 1693891016000}, 'war_id': {'v': 70, 'cdt': 1693898176000}, 'sensor_12300': {'v': 6812, 'cdt': 1693898172000}, 'protocol': {'v': 'MQTT', 'cdt': 1693822417000}, 'sensor_97': {'v': 0, 'cdt': 1692622714000}, 'sensor_98': {'v': 0, 'cdt': 1692622714000}, 'sensor_99': {'v': 0, 'cdt': 1692622714000}, 'sensor_45058': {'v': 10042730.546820872, 'cdt': 1692603417000}, 'sensor_12292': {'v': 3949, 'cdt': 1693898172000}, 'spd': {'v': 0, 'cdt': 1693891165000}, 'sat': {'v': 10, 'cdt': 1693898140000}, 'sensor_12298': {'v': 10712, 'cdt': 1692605577000}, 'sensor_103': {'v': 0, 'cdt': 1692622714000}, 'sensor_12297': {'v': 42014, 'cdt': 1692602817000}, 'fun_id': {'v': 100, 'cdt': 1693898176000}, 'sensor_102': {'v': 0, 'cdt': 1692622714000}, 'sensor_12296': {'v': 420, 'cdt': 1692602817000}, 'sensor_8200': {'v': 133, 'cdt': 1693896745000}, 'sensor_101': {'v': 0, 'cdt': 1692622714000}, 'sensor_100': {'v': 0, 'cdt': 1692622714000}, 'hdop': {'v': 17, 'cdt': 1693898172000}, 'sensor_12299': {'v': 0, 'cdt': 1693891134000}, 'sensor_49156': {'v': 'accent', 'cdt': 1692622413000}}, 'prms': {'fun_id': 100, 'war_id': 70, 'fw_name': 'FF0_01_122', 'protocol': 'MQTT', 'sensor_16385': 550, 'sensor_12300': 6812, 'sensor_16386': 0, 'sensor_16387': 1922200, 'sensor_12299': 0, 'ePwrV': 13314, 'sensor_12292': 3949, 'sensor_8200': 133, 'sensor_99': 0, 'sensor_98': 0, 'sensor_103': 0, 'sensor_97': 0, 'acc': 1, 'sensor_100': 0, 'sensor_102': 0, 'spd': 0, 'hdop': 17, 'sat': 10, 'sensor_8192': 0, 'sensor_101': 0, 'sensor_8199': 26}, 'devPrms': ['sensor_16385', 'sensor_12300', 'sensor_16386', 'sensor_16387', 'sensor_12299', 'ePwrV', 'sensor_12292', 'sensor_8200', 'sensor_99', 'sensor_98', 'sensor_103', 'sensor_97', 'acc', 'sensor_100', 'sensor_102', 'spd', 'hdop', 'sat', 'sensor_8192', 'sensor_101', 'sensor_8199', 'protocol', 'fun_id', 'war_id', 'fw_name'], 'old_params': {'sensor_16385': 550, 'sensor_12300': 6812, 'sensor_16386': 0, 'sensor_16387': 1922200, 'sensor_12299': 0, 'ePwrV': 13314, 'sensor_12292': 3949, 'sensor_8200': 133, 'sensor_99': 0, 'sensor_98': 0, 'sensor_103': 0, 'sensor_97': 0, 'acc': 1, 'sensor_100': 0, 'sensor_102': 0, 'spd': 0, 'hdop': 17, 'sat': 10, 'sensor_8192': 0, 'sensor_101': 0, 'sensor_8199': 26, 'protocol': 'MQTT'}, 'vLoc': 1, 'vCon': 1, 'ip': '51.36.241.229', 'rl': 0, 'trl': 9611, 'mdu': 0, 'tmdu': 558832, 'eidl': 4, 'teidl': 311271, 'fc': 0, 'tfc': 9.84, 'acc': 1, 'accOn': 1356945, 'accOff': 6058096, 'sdu': 0, 'tsdu': 0, 'lat': 21.424415588378906, 'lng': 39.81888198852539}, 'counters': {'odometer_type': 'canbus', 'odometer': 9611, 'engine_hours_type': 'acc', 'engine_hours': 1356945, 'last_acc': 1}, 'is_wasl_connected': 'Not Connected', 'iconUrl': 'https://api.afaqy.sa/images/units/icons/icon.png', 'hasCCTV': False}
+[2024-04-18T20:51:39.774+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk1.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-04-18T20:51:39.808+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk3.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-04-18T20:51:39.842+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk2.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-04-18T20:51:39.875+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk1.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2024-04-18T20:51:39.924+0000] {_transport.py:335} INFO - GET https://dbelk1.afaqy.local:9200/_cluster/health [status:200 duration:0.080s]
+[2024-04-18T20:51:40.468+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/elastic_transport/_serializer.py", line 108, in dumps
+    return self.json_dumps(data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/elastic_transport/_serializer.py", line 79, in json_dumps
+    return json.dumps(
+  File "/usr/local/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/local/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/airflow/.local/lib/python3.8/site-packages/elasticsearch/serializer.py", line 73, in default
+    raise TypeError(f"Unable to serialize {data!r} (type: {type(data)})")
+TypeError: Unable to serialize <function Utils.units_transform.<locals>.<lambda> at 0x7faa0b5bd040> (type: <class 'function'>)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Units_dag.py", line 112, in ETL_job
+    Elk_client.elk_pushData(Globals.index_name,units_list_update)
+  File "/opt/airflow/dags/elk_manager.py", line 69, in elk_pushData
+    helpers.bulk(self.elk_client, docs_list, index=index_name, chunk_size=batch)
+  File "/home/airflow/.local/lib/python3.8/site-packages/elasticsearch/helpers/actions.py", line 521, in bulk
+    for ok, item in streaming_bulk(
+  File "/home/airflow/.local/lib/python3.8/site-packages/elasticsearch/helpers/actions.py", line 421, in streaming_bulk
+    for bulk_data, bulk_actions in _chunk_actions(
+  File "/home/airflow/.local/lib/python3.8/site-packages/elasticsearch/helpers/actions.py", line 233, in _chunk_actions
+    ret = chunker.feed(action, data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/elasticsearch/helpers/actions.py", line 161, in feed
+    data_bytes = to_bytes(self.serializer.dumps(data), "utf-8")
+  File "/home/airflow/.local/lib/python3.8/site-packages/elastic_transport/_serializer.py", line 112, in dumps
+    raise SerializationError(
+elastic_transport.SerializationError: Unable to serialize to JSON: {'Unit': <function Utils.units_transform.<locals>.<lambda> at 0x7faa0b5bd040>, 'spd': 0, 'acc': 1, 'last_update': 1693898176000, 'device_imei': '861937062926689', 'device_serial': '861937062926689', 'sim_number': '+966830031819882', 'sim_serial': '421296805404', 'device': 'bceIotm', 'company': '', 'user_id_units': '62f2797ba0b44a15ac782151', 'account': 'almanzoma-admin', 'operation_code': 'Enter_634fdfca-0942-4dff-925f-331e59deeb16', 'vehicle_battery': 13314} (type: dict)
+[2024-04-18T20:51:40.486+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=Units_statistics_DAG, task_id=ETL_job, map_index=11, execution_date=20240418T204918, start_date=20240418T205117, end_date=20240418T205140
+[2024-04-18T20:51:40.502+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 8227 for task ETL_job (Unable to serialize to JSON: {'Unit': <function Utils.units_transform.<locals>.<lambda> at 0x7faa0b5bd040>, 'spd': 0, 'acc': 1, 'last_update': 1693898176000, 'device_imei': '861937062926689', 'device_serial': '861937062926689', 'sim_number': '+966830031819882', 'sim_serial': '421296805404', 'device': 'bceIotm', 'company': '', 'user_id_units': '62f2797ba0b44a15ac782151', 'account': 'almanzoma-admin', 'operation_code': 'Enter_634fdfca-0942-4dff-925f-331e59deeb16', 'vehicle_battery': 13314} (type: dict); 389153)
+[2024-04-18T20:51:40.575+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-18T20:51:40.601+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

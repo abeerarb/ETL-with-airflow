@@ -1,0 +1,139 @@
+[2024-04-23T10:20:15.181+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-04-23T10:00:00+00:00 map_index=4 [queued]>
+[2024-04-23T10:20:15.241+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-04-23T10:00:00+00:00 map_index=4 [queued]>
+[2024-04-23T10:20:15.241+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2024-04-23T10:20:15.356+0000] {taskinstance.py:2217} INFO - Executing <Mapped(_PythonDecoratedOperator): ETL_job> on 2024-04-23 10:00:00+00:00
+[2024-04-23T10:20:15.378+0000] {standard_task_runner.py:60} INFO - Started process 492978 to run task
+[2024-04-23T10:20:15.437+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'ETL_job', 'scheduled__2024-04-23T10:00:00+00:00', '--job-id', '12888', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmp1wkf5qki', '--map-index', '4']
+[2024-04-23T10:20:15.447+0000] {standard_task_runner.py:88} INFO - Job 12888: Subtask ETL_job
+[2024-04-23T10:20:15.725+0000] {task_command.py:423} INFO - Running <TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-04-23T10:00:00+00:00 map_index=4 [running]> on host a09da322e808
+[2024-04-23T10:20:16.096+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='ETL_job' AIRFLOW_CTX_EXECUTION_DATE='2024-04-23T10:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-23T10:00:00+00:00'
+[2024-04-23T10:20:16.098+0000] {Units_dag.py:99} INFO - i: 40000, chunk: 10000
+[2024-04-23T10:20:16.106+0000] {Units_dag.py:100} INFO - child token is::: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5hZmFxeS5zYS9hdXRoL2xvZ2luX2FzIiwiaWF0IjoxNzEzODY3NjA0LCJleHAiOjE3MTY0NTk2MDQsIm5iZiI6MTcxMzg2NzYwNCwianRpIjoidHVBR28zTjR1Y3h6YjlKVyIsInN1YiI6IjVkNjNlNTFlMDNlZDUyOTJhNDJjMjRlNiIsInBydiI6IjI3MGVjZmM3ZWEzZWQ5MzdlYTg0OTM2MmEzYTUwOTEwYzZkOGNlNGYiLCJsb2dpbl9hc19pZCI6IjY1N2YwYWQ3M2Y5NzcyOTVjZjA1NTc2YSJ9.HSamBth1Vd8bI0PxxWiRnXaqeRLxX8ACKqLPVwA0vbs
+[2024-04-23T10:20:45.127+0000] {Units_dag.py:104} INFO - {'_id': '6265390f5e382e2ef6329784', 'icon': 'icons/icon.png', 'driver_id': '', 'tailer_id': '', 'profile': {'vehicle_type': None, 'measurement_type': 'count', 'max_capacity': 0, 'vin': None, 'plate_number': None, 'start_operation': None, 'contract_milage': None, 'opening_milage': None, 'model': None, 'fuel_type': '91', 'year': 0, 'seats': 2}, 'device_password': '***', 'device_type': 'gps', 'gateway': False, 'name': '4073  ر ب ن', 'operation_code': '21c206de-e5f5-47b8-acc6-85b57d25fac1', 'device_gateway': '', 'business_types': {'waste': False, 'transportation': True, 'water': False}, 'imei': '860665057496092', 'sim_number': '+966830030807081', 'sim_serial': '21276300778', 'device_serial': '860665057496092', 'device': 'bceIotm', 'user_id': '5f0d614303ed52b67f28d078', 'created_by': '5e6655bf03ed52e1ab79d301', 'updated_at': '2024-04-18 11:18:59', 'created_at': '2022-04-24 14:48:31', 'custom_fields': [], 'creator': 'amr.ahmed', 'company': '', 'owner': 'alwefaq-idrive', 'last_update': {'dtt': 1667380851000, 'dts': 1667380859973, 'spd': 0, 'ang': 0, 'alt': 0, 'chPrams': {'acc': {'v': 1, 'cdt': 1667380146000}, 'sensor_8192': {'v': 0, 'cdt': 1667380583000}, 'ePwrV': {'v': 13270, 'cdt': 1667380826000}, 'sensor_136': {'v': 0, 'cdt': 1666604091000}, 'sensor_8199': {'v': 29, 'cdt': 1667380826000}, 'sensor_16387': {'v': 5399206, 'cdt': 1667380826000}, 'sensor_12300': {'v': 13740, 'cdt': 1667380826000}, 'protocol': {'v': 'MQTT', 'cdt': 1665838969000}, 'sensor_98': {'v': 0, 'cdt': 1667380150000}, 'sensor_99': {'v': 0, 'cdt': 1667323667000}, 'sensor_139': {'v': 0, 'cdt': 1667380176000}, 'sensor_8201': {'v': 0, 'cdt': 1666604091000}, 'sensor_2': {'v': 1, 'cdt': 1667380826000}, 'sensor_137': {'v': 0, 'cdt': 1666604091000}, 'sensor_45058': {'v': 27136178, 'cdt': 1667380826000}, 'spd': {'v': 0, 'cdt': 1667380583000}, 'sensor_12292': {'v': 4129, 'cdt': 1667380826000}, 'sat': {'v': 12, 'cdt': 1667380645000}, 'sensor_103': {'v': 0, 'cdt': 1666604091000}, 'sensor_8200': {'v': 0, 'cdt': 1651049802000}, 'sensor_101': {'v': 0, 'cdt': 1667323667000}, 'sensor_100': {'v': 0, 'cdt': 1667323667000}, 'hdop': {'v': 8, 'cdt': 1667380676000}, 'sensor_12299': {'v': 0, 'cdt': 1667380583000}, 'sensor_140': {'v': 0, 'cdt': 1667380769000}, 'sensor_12317': {'v': 93, 'cdt': 1667380826000}, 'sensor_129': {'v': 0, 'cdt': 1667380176000}, 'sensor_127': {'v': 0, 'cdt': 1667380176000}, 'sensor_49156': {'v': 'script1', 'cdt': 1667380826000}, 'sensor_40961': {'v': 0, 'cdt': 1667380826000}}, 'prms': {'sensor_49156': 'script1', 'acc': 1, 'protocol': 'MQTT'}, 'devPrms': ['sensor_45058', 'sensor_12300', 'ePwrV', 'sensor_16387', 'sensor_12317', 'sensor_40961', 'sensor_12299', 'sensor_12292', 'sensor_8199', 'sensor_98', 'sensor_140', 'sensor_8201', 'sensor_103', 'sensor_8200', 'sensor_136', 'sensor_101', 'sensor_137', 'sensor_127', 'acc', 'sensor_99', 'sensor_139', 'sensor_2', 'sensor_8192', 'sensor_100', 'sensor_129', 'spd', 'hdop', 'sat', 'protocol', 'sensor_49156'], 'old_params': {'sensor_49156': 'script1', 'sensor_45058': 27136178, 'sensor_12300': 13740, 'ePwrV': 13270, 'sensor_16387': 5399206, 'sensor_12317': 93, 'sensor_40961': 0, 'sensor_12299': 0, 'sensor_12292': 4129, 'sensor_8199': 29, 'sensor_98': 0, 'sensor_140': 0, 'sensor_8201': 0, 'sensor_103': 0, 'sensor_8200': 0, 'sensor_136': 0, 'sensor_101': 0, 'sensor_137': 0, 'sensor_127': 0, 'acc': 1, 'sensor_99': 0, 'sensor_139': 0, 'sensor_2': 1, 'sensor_8192': 0, 'sensor_100': 0, 'sensor_129': 0, 'protocol': 'MQTT'}, 'vLoc': 0, 'vCon': 1, 'ip': '51.39.6.241', 'rl': 0, 'trl': 26994, 'mdu': 0, 'tmdu': 1536084, 'eidl': 25, 'teidl': 808285, 'fc': 0, 'tfc': 5.2368, 'acc': 1, 'accOn': 3052640, 'accOff': 14087048, 'sdu': 0, 'tsdu': 0, 'lat': 0, 'lng': 0}, 'counters': {'odometer_type': 'canbus', 'odometer': 26994, 'engine_hours_type': 'acc', 'engine_hours': 3052640, 'last_acc': 1}, 'is_wasl_connected': 'Not Connected', 'iconUrl': 'https://api.afaqy.sa/images/units/icons/icon.png', 'hasCCTV': False}
+[2024-04-23T10:21:01.158+0000] {job.py:213} ERROR - Job heartbeat got an exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "postgres" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/jobs/job.py", line 187, in heartbeat
+    self._merge_from(Job._fetch_from_db(self, session))
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/api_internal/internal_api_call.py", line 114, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/jobs/job.py", line 308, in _fetch_from_db
+    session.merge(job)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3056, in merge
+    return self._merge(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3136, in _merge
+    merged = self.get(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2853, in get
+    return self._get_impl(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2975, in _get_impl
+    return db_load_fn(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/loading.py", line 530, in load_on_pk_identity
+    session.execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2024-04-23T10:21:03.132+0000] {job.py:221} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2024-04-23T10:21:03.865+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk3.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-04-23T10:21:04.196+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk2.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-04-23T10:21:04.469+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk1.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-04-23T10:21:04.497+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk3.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2024-04-23T10:21:04.573+0000] {_transport.py:335} INFO - GET https://dbelk3.afaqy.local:9200/_cluster/health [status:200 duration:0.102s]
+[2024-04-23T10:21:05.770+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk2.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2024-04-23T10:21:08.277+0000] {_transport.py:335} INFO - PUT https://dbelk2.afaqy.local:9200/units_statistics_***/_bulk [status:200 duration:2.536s]
+[2024-04-23T10:21:08.797+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-04-23T10:21:08.819+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=Units_statistics_DAG, task_id=ETL_job, map_index=4, execution_date=20240423T100000, start_date=20240423T102015, end_date=20240423T102108
+[2024-04-23T10:21:08.875+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-23T10:21:08.910+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

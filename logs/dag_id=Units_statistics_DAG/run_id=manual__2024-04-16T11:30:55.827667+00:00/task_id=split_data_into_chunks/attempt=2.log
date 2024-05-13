@@ -1,0 +1,29 @@
+[2024-04-18T00:06:25.676+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.split_data_into_chunks manual__2024-04-16T11:30:55.827667+00:00 [queued]>
+[2024-04-18T00:06:25.710+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.split_data_into_chunks manual__2024-04-16T11:30:55.827667+00:00 [queued]>
+[2024-04-18T00:06:25.711+0000] {taskinstance.py:2193} INFO - Starting attempt 2 of 5
+[2024-04-18T00:06:25.763+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): split_data_into_chunks> on 2024-04-16 11:30:55.827667+00:00
+[2024-04-18T00:06:25.769+0000] {standard_task_runner.py:60} INFO - Started process 365945 to run task
+[2024-04-18T00:06:25.864+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'split_data_into_chunks', 'manual__2024-04-16T11:30:55.827667+00:00', '--job-id', '5639', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmp9w2myd1v']
+[2024-04-18T00:06:25.889+0000] {standard_task_runner.py:88} INFO - Job 5639: Subtask split_data_into_chunks
+[2024-04-18T00:06:26.104+0000] {task_command.py:423} INFO - Running <TaskInstance: Units_statistics_DAG.split_data_into_chunks manual__2024-04-16T11:30:55.827667+00:00 [running]> on host a09da322e808
+[2024-04-18T00:06:26.383+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='split_data_into_chunks' AIRFLOW_CTX_EXECUTION_DATE='2024-04-16T11:30:55.827667+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-16T11:30:55.827667+00:00'
+[2024-04-18T00:06:26.436+0000] {Units_dag.py:78} INFO - type of length is :<class 'NoneType'>
+[2024-04-18T00:06:26.437+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Units_dag.py", line 84, in split_data_into_chunks
+    if length > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+[2024-04-18T00:06:26.453+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=Units_statistics_DAG, task_id=split_data_into_chunks, execution_date=20240416T113055, start_date=20240418T000625, end_date=20240418T000626
+[2024-04-18T00:06:26.494+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 5639 for task split_data_into_chunks ('>' not supported between instances of 'NoneType' and 'int'; 365945)
+[2024-04-18T00:06:26.566+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-18T00:06:26.752+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

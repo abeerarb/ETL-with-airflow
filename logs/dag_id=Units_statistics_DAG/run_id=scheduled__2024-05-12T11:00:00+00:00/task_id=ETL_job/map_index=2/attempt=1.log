@@ -1,0 +1,30 @@
+[2024-05-12T11:20:17.764+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-05-12T11:00:00+00:00 map_index=2 [queued]>
+[2024-05-12T11:20:17.798+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-05-12T11:00:00+00:00 map_index=2 [queued]>
+[2024-05-12T11:20:17.801+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2024-05-12T11:20:17.927+0000] {taskinstance.py:2217} INFO - Executing <Mapped(_PythonDecoratedOperator): ETL_job> on 2024-05-12 11:00:00+00:00
+[2024-05-12T11:20:17.963+0000] {standard_task_runner.py:60} INFO - Started process 1707 to run task
+[2024-05-12T11:20:18.029+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'ETL_job', 'scheduled__2024-05-12T11:00:00+00:00', '--job-id', '53909', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmpbk6609xj', '--map-index', '2']
+[2024-05-12T11:20:18.055+0000] {standard_task_runner.py:88} INFO - Job 53909: Subtask ETL_job
+[2024-05-12T11:20:18.490+0000] {task_command.py:423} INFO - Running <TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-05-12T11:00:00+00:00 map_index=2 [running]> on host 3abf70bf7e68
+[2024-05-12T11:20:19.350+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='ETL_job' AIRFLOW_CTX_EXECUTION_DATE='2024-05-12T11:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-12T11:00:00+00:00'
+[2024-05-12T11:20:19.355+0000] {Units_dag.py:98} INFO - i: 20000, chunk: 10000
+[2024-05-12T11:20:19.355+0000] {Units_dag.py:99} INFO - child token is::: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5hZmFxeS5zYS9hdXRoL2xvZ2luX2FzIiwiaWF0IjoxNzE1NTEyODAzLCJleHAiOjE3MTgxMDQ4MDMsIm5iZiI6MTcxNTUxMjgwMywianRpIjoid3dFVXJ5VHB0VDVCQUtRMCIsInN1YiI6IjVkNjNlNTFlMDNlZDUyOTJhNDJjMjRlNiIsInBydiI6IjI3MGVjZmM3ZWEzZWQ5MzdlYTg0OTM2MmEzYTUwOTEwYzZkOGNlNGYiLCJsb2dpbl9hc19pZCI6IjY1N2YwYWQ3M2Y5NzcyOTVjZjA1NTc2YSJ9.k_MaN6w4aBn1Vg9_YZHOfo-OLygPGLfPi9F9FiXHP3o
+[2024-05-12T11:20:38.857+0000] {Units_dag.py:103} INFO - {'_id': '618a70f13f35f3475a31fb55', 'icon': 'icons/icon.png', 'driver_id': '', 'tailer_id': '', 'profile': {'vehicle_type': '', 'vin': '', 'plate_number': '', 'model': '', 'year': 0, 'seats': 2, 'fuel_type': '91', 'start_operation': '', 'contract_milage': '', 'opening_milage': '', 'measurement_type': '', 'max_capacity': ''}, 'device_password': '***', 'device_type': 'gps', 'gateway': False, 'name': '862549044064916', 'operation_code': None, 'device_gateway': None, 'business_types': {'waste': False, 'transportation': True, 'water': False}, 'imei': '862549044064916', 'sim_number': '+9668625490440', 'sim_serial': '862549044064916', 'device_serial': '862549044064916', 'device': 'ruptela', 'user_id': '5e539d8203ed52f71d634478', 'created_by': '5e6655bf03ed52e1ab79d301', 'updated_at': '2024-04-18 11:18:59', 'created_at': '2021-11-09 16:00:33', 'custom_fields': [], 'creator': 'amr.ahmed', 'company': '', 'owner': 'aemallamar', 'counters': {'odometer_type': 'gps', 'odometer': None, 'engine_hours_type': 'acc', 'engine_hours': 0}, 'is_wasl_connected': 'Not Connected', 'iconUrl': 'https://api.afaqy.sa/images/units/icons/icon.png', 'hasCCTV': False}
+[2024-05-12T11:20:39.672+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk2.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-05-12T11:20:39.743+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk3.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-05-12T11:20:39.810+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk1.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-05-12T11:20:39.839+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk2.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2024-05-12T11:20:39.908+0000] {_transport.py:335} INFO - GET https://dbelk2.afaqy.local:9200/_cluster/health [status:200 duration:0.096s]
+[2024-05-12T11:20:40.453+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk3.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2024-05-12T11:20:42.380+0000] {local_task_job_runner.py:234} INFO - Task exited with return code -9
+[2024-05-12T11:20:42.545+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

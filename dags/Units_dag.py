@@ -1,14 +1,13 @@
 from airflow import DAG
 from airflow.decorators import task
 from airflow.utils.dates import days_ago
-from globals import Globals
 from datetime import datetime, timedelta
 import json
 import logging  
-from globals import Globals
 import requests as _ApiCaller
-from utilities import Utils
-from elk_manager import ElkManager
+from units_statistics.utilities import Utils
+from units_statistics.elk_manager import ElkManager
+from units_statistics.globals import Globals
 
 logger = logging.getLogger(__name__)
 

@@ -1,0 +1,33 @@
+[2024-04-22T23:00:14.960+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-04-22T22:40:00+00:00 map_index=10 [queued]>
+[2024-04-22T23:00:14.978+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-04-22T22:40:00+00:00 map_index=10 [queued]>
+[2024-04-22T23:00:14.978+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2024-04-22T23:00:15.034+0000] {taskinstance.py:2217} INFO - Executing <Mapped(_PythonDecoratedOperator): ETL_job> on 2024-04-22 22:40:00+00:00
+[2024-04-22T23:00:15.054+0000] {standard_task_runner.py:60} INFO - Started process 481653 to run task
+[2024-04-22T23:00:15.109+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Units_statistics_DAG', 'ETL_job', 'scheduled__2024-04-22T22:40:00+00:00', '--job-id', '12099', '--raw', '--subdir', 'DAGS_FOLDER/Units_dag.py', '--cfg-path', '/tmp/tmp42pram6n', '--map-index', '10']
+[2024-04-22T23:00:15.123+0000] {standard_task_runner.py:88} INFO - Job 12099: Subtask ETL_job
+[2024-04-22T23:00:15.305+0000] {task_command.py:423} INFO - Running <TaskInstance: Units_statistics_DAG.ETL_job scheduled__2024-04-22T22:40:00+00:00 map_index=10 [running]> on host a09da322e808
+[2024-04-22T23:00:15.625+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='Units_statistics_DAG' AIRFLOW_CTX_TASK_ID='ETL_job' AIRFLOW_CTX_EXECUTION_DATE='2024-04-22T22:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-22T22:40:00+00:00'
+[2024-04-22T23:00:15.626+0000] {Units_dag.py:99} INFO - i: 100000, chunk: 10000
+[2024-04-22T23:00:15.626+0000] {Units_dag.py:100} INFO - child token is::: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5hZmFxeS5zYS9hdXRoL2xvZ2luX2FzIiwiaWF0IjoxNzEzODI2ODAzLCJleHAiOjE3MTY0MTg4MDMsIm5iZiI6MTcxMzgyNjgwMywianRpIjoia0tuNWtlallab0hXZjE3biIsInN1YiI6IjVkNjNlNTFlMDNlZDUyOTJhNDJjMjRlNiIsInBydiI6IjI3MGVjZmM3ZWEzZWQ5MzdlYTg0OTM2MmEzYTUwOTEwYzZkOGNlNGYiLCJsb2dpbl9hc19pZCI6IjY1N2YwYWQ3M2Y5NzcyOTVjZjA1NTc2YSJ9.H46QVLD6RylwlCvOzL3Ylm1blHGj2xfkOaY_XlMoAW0
+[2024-04-22T23:00:45.196+0000] {Units_dag.py:104} INFO - {'_id': '64521b8318f8461243249cb5', 'icon': 'icons/icon.png', 'driver_id': '', 'tailer_id': '', 'profile': {'vehicle_type': '', 'measurement_type': 'count', 'max_capacity': 0, 'vin': '', 'plate_number': '', 'start_operation': '', 'contract_milage': '', 'opening_milage': '', 'model': '', 'fuel_type': '91', 'year': 0, 'seats': 2}, 'device_password': '***', 'device_type': 'gps', 'gateway': False, 'name': '861937063013586', 'operation_code': '', 'device_gateway': '', 'business_types': {'waste': False, 'transportation': True, 'water': False}, 'imei': '861937063013586', 'sim_number': '+966830031778101', 'sim_serial': '421296804856', 'device_serial': '861937063013586', 'device': 'bceIotm', 'user_id': '62f2797ba0b44a15ac782151', 'created_by': '5e6655bf03ed52e1ab79d301', 'updated_at': '2024-04-18 11:18:59', 'created_at': '2023-05-03 11:29:55', 'custom_fields': [], 'creator': 'amr.ahmed', 'company': '', 'owner': 'almanzoma-admin', 'last_update': {'dtt': 1683727311000, 'dts': 1683729967810, 'spd': 0, 'ang': 0, 'alt': 0, 'chPrams': {'acc': {'v': 0, 'cdt': 1683727311000}, 'protocol': {'v': 'MQTT', 'cdt': 1683455160000}}, 'prms': {'acc': 0, 'protocol': 'MQTT'}, 'devPrms': ['acc', 'protocol'], 'old_params': {'acc': 1, 'protocol': 'MQTT'}, 'vLoc': 0, 'vCon': 1, 'ip': '51.36.98.8', 'rl': 0, 'trl': 0, 'mdu': 0, 'tmdu': 0, 'eidl': 13, 'teidl': 4781, 'fc': 0, 'tfc': 0, 'acc': 0, 'accOn': 91651, 'accOff': 4711, 'sdu': 0, 'tsdu': 0, 'lat': 0, 'lng': 0}, 'counters': {'odometer_type': 'canbus', 'odometer': 0, 'engine_hours_type': 'acc', 'engine_hours': 91651, 'last_acc': 0}, 'is_wasl_connected': 'Not Connected', 'iconUrl': 'https://api.afaqy.sa/images/units/icons/icon.png', 'hasCCTV': False}
+[2024-04-22T23:00:52.835+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk2.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-04-22T23:00:52.904+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk1.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-04-22T23:00:52.961+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/elasticsearch/_sync/client/__init__.py:399: SecurityWarning: Connecting to 'https://dbelk3.afaqy.local:9200' using TLS with verify_certs=False is insecure
+  _transport = transport_class(
+
+[2024-04-22T23:00:53.014+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk2.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2024-04-22T23:00:53.090+0000] {_transport.py:335} INFO - GET https://dbelk2.afaqy.local:9200/_cluster/health [status:200 duration:0.126s]
+[2024-04-22T23:00:53.842+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dbelk1.afaqy.local'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2024-04-22T23:00:55.431+0000] {_transport.py:335} INFO - PUT https://dbelk1.afaqy.local:9200/units_statistics_***/_bulk [status:200 duration:1.630s]
+[2024-04-22T23:00:55.561+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-04-22T23:00:55.573+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=Units_statistics_DAG, task_id=ETL_job, map_index=10, execution_date=20240422T224000, start_date=20240422T230014, end_date=20240422T230055
+[2024-04-22T23:00:55.639+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-22T23:00:55.662+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

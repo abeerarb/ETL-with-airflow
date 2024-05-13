@@ -1,0 +1,13 @@
+[2024-05-07T11:20:02.818+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: AVL_DAG.get_units_from_APi.login_to_child scheduled__2024-05-07T11:00:00+00:00 [queued]>
+[2024-05-07T11:20:02.833+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: AVL_DAG.get_units_from_APi.login_to_child scheduled__2024-05-07T11:00:00+00:00 [queued]>
+[2024-05-07T11:20:02.834+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2024-05-07T11:20:02.852+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): get_units_from_APi.login_to_child> on 2024-05-07 11:00:00+00:00
+[2024-05-07T11:20:02.859+0000] {standard_task_runner.py:60} INFO - Started process 832498 to run task
+[2024-05-07T11:20:02.866+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'AVL_DAG', 'get_units_from_APi.login_to_child', 'scheduled__2024-05-07T11:00:00+00:00', '--job-id', '38204', '--raw', '--subdir', 'DAGS_FOLDER/Avl_dag.py', '--cfg-path', '/tmp/tmp4a_x21_9']
+[2024-05-07T11:20:02.868+0000] {standard_task_runner.py:88} INFO - Job 38204: Subtask get_units_from_APi.login_to_child
+[2024-05-07T11:20:02.953+0000] {task_command.py:423} INFO - Running <TaskInstance: AVL_DAG.get_units_from_APi.login_to_child scheduled__2024-05-07T11:00:00+00:00 [running]> on host a09da322e808
+[2024-05-07T11:20:03.069+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='abeer-araby' AIRFLOW_CTX_DAG_ID='AVL_DAG' AIRFLOW_CTX_TASK_ID='get_units_from_APi.login_to_child' AIRFLOW_CTX_EXECUTION_DATE='2024-05-07T11:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-07T11:00:00+00:00'
+[2024-05-07T11:20:03.451+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-05-07T11:20:03.467+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=AVL_DAG, task_id=get_units_from_APi.login_to_child, execution_date=20240507T110000, start_date=20240507T112002, end_date=20240507T112003
+[2024-05-07T11:20:03.523+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-05-07T11:20:03.584+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
