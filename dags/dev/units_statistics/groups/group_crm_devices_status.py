@@ -41,18 +41,10 @@ def devices_data(**kwargs):
     response = _ApiCaller.get(url)
     response.raise_for_status()  # Raise an HTTPError on a bad status
     # Save the content to an Excel file
-    output_path = 'devices.xlsx'
+    output_path = Globals.CRM_devices_path #'devices.xlsx'
     with open(output_path, 'wb') as output:
-        output.write(response.content)    
+        output.write(response.content) 
 
-    # Read the Excel file into a DataFrame
-    df = pd.read_excel(output_path)
-    #os.remove(output_path)
-    selected_columns= ['IMEI','Status','GSM']
-    filtered_columns_df= df[selected_columns]
-    logger.info(f"names: {filtered_columns_df.columns}")
-    # Save the selected columns to a new Excel file   
-    filtered_columns_df.to_excel(Globals.CRM_devices_path, index=False)
     
 
 # def get_all_simCards(**kwargs):

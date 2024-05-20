@@ -33,6 +33,20 @@ child_userid= "5d63e51e03ed5292a42c24e6" #"afaqyic"
 username= "abeer.araby" #parent_username
 password= "2vmdnnKo3" #parent_password
 
+# @task
+# def login_CRM():
+#     #ti = kwargs["ti"]
+#     data_payload = {
+#         "data": json.dumps({"userName": "amr.ahmed@afaqy.com", "password": "Temp@150", "loginType": 1})}
+#     response = _ApiCaller.post("https://crmbackend.afaqy.sa/Security/LoginIC", data_payload)
+#     logger.debug(f"response: {response.text}")
+#     if response.status_code == 200:
+#            # ti.xcom_push(key='CRM_token', value=response.json()['data']['token'])
+#             logger.info(f"ti context info :{response.json()['data']['token']}")
+
+#     else:
+#         raise Exception("faild to login to CRM")
+
 @task
 def login_parent(acc_name: str, acc_pass: str, **kwargs):
     ti = kwargs["ti"]
@@ -123,11 +137,13 @@ with DAG(
     on_success_callback=cleanup_xcom,
     on_failure_callback=cleanup_xcom
 ) as dag:   
-
+    
+    # CRM_login= login_CRM() 
     parent= login_parent(username,password) 
     child= login_child(child_userid) 
     pagenation= get_pagenation_count() 
     etl_arg= split_data_into_chunks()
     units_list = ETL_job.partial(child_token=child).expand(args= etl_arg)
 
+    #CRM_login  
     parent >> child >>pagenation >> etl_arg>>units_list

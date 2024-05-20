@@ -42,11 +42,14 @@ class ElkManager:
             data.append({'doc_id': doc_id, 'device_imei': device_imei})
         # Convert the list of dictionaries to a pandas DataFrame
         df = pd.DataFrame(data)
+        logger.info(f"Number of rows in df from elk : {df.shape[0]}")
         return df
 
     def update_index_status(es, df_index_data, index_name):
     #  logger.info(f"index_name to be updated: {index_name}")
+        logger.info(f"Number of rows elk : {df_index_data.shape[0]}")
         df2 = pd.read_excel(Globals.CRM_devices_path)
+        logger.info(f"Number of rows in crm: {df2.shape[0]}")
         logger.info("Excel file read successfully.")
 
         left_join = pd.merge(df_index_data, df2, left_on='device_imei', right_on='IMEI', how='left')
