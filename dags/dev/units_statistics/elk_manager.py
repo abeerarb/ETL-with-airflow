@@ -49,8 +49,10 @@ class ElkManager:
     #  logger.info(f"index_name to be updated: {index_name}")
         logger.info(f"Number of rows elk : {df_index_data.shape[0]}")
         df2 = pd.read_excel(Globals.CRM_devices_path)
-        logger.info(f"Number of rows in crm: {df2.shape[0]}")
         logger.info("Excel file read successfully.")
+        # Convert the device_imei and IMEI columns to strings, strip leading and trailing whitespace
+        df_index_data['device_imei'] = df_index_data['device_imei'].astype(str).str.strip()
+        df2['IMEI'] = df2['IMEI'].astype(str).str.strip()
 
         left_join = pd.merge(df_index_data, df2, left_on='device_imei', right_on='IMEI', how='left')
         logger.info("Left Join completed.")
@@ -62,7 +64,7 @@ class ElkManager:
         for _, row in left_join.iterrows():
             # Convert GSM value to string, handling None values
             new_fields = {
-                "GSM": row['GSM'] if not pd.isnull(row['GSM']) else None,
+                #"GSM": row['GSM'] if not pd.isnull(row['GSM']) else None,
                 "device_status": row['Status'] if not pd.isnull(row['Status']) else None
                 # Add more new fields as needed
             }
