@@ -1,5 +1,7 @@
 # ETL-with-airflow
 
+Datawarehouse project that fetch data # daily # from Mongodb collections and APIs update the elasticsearch with the new data, apply dwh management algorithm intransform and load the data to the datawarehouse
+
 A new docker image build for airflow with some needed python dependcies 
 work on airflow :
 Data extracted from apis 
